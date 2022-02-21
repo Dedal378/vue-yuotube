@@ -846,6 +846,7 @@
 
     <!--subscription-->
     <div class="flex justify-between items-center max-w-screen-2xl px-24 pt-4">
+
       <div class="flex items-center">
         <img alt="image" class="h-16 rounded-full mr-5" src="https://picsum.photos/id/1027/68">
         <div>
