@@ -1,4 +1,5 @@
 <script setup>
+
 </script>
 
 <template>
@@ -236,7 +237,7 @@
   </header>
 
   <!--HEADER TAGS-->
-  <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
+  <!--<section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
     <div class="border-t border-b px-4 max-w-screen-2xl m-auto">
       <div class="py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap">
         <a class="px-3 py1 bg-gray-600 border border-gray-700 rounded-full hover:bg-gray-500 text-white transition" href="#">All</a>
@@ -262,7 +263,7 @@
         <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Programming</a>
       </div>
     </div>
-  </section>
+  </section>-->
   <!--***************************-->
 
 
@@ -826,7 +827,7 @@
 
 
   <!--MAIN-->
-  <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
+  <!--<main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-screen-2xl m-auto">
       <a class="mb-7 group" href="#">
         <div class="relative">
@@ -1404,7 +1405,11 @@
         </div>
       </a>
     </div>
-  </main>
+  </main>-->
+
+
+  <!--CHANNEL PAGE-->
+
 </template>
 
 <style>
