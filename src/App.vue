@@ -58,11 +58,66 @@
         </svg>
       </button>
 
-      <!--pop-up btn-->
-      <button class="relative group">
+      <!--pop-up btn list 1-->
+      <button class="relative group p-2 focus:outline-none">
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
+        <!--TODO: переделать такое нельзя допускать-->
+        <div class="opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white bg-opacity-95 w-56 border border-t-0">
+          <section class="py-2 border-b">
+            <ul>
+              <li>
+                <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
+                  <svg class="h-6 w-6 mr-3 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd" />
+                  </svg>
+                  <span>YouTube TV</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="py-2 border-b">
+            <ul>
+              <li>
+                <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+</svg>
+                  <span>YouTube Music</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+</svg>
+                  <span>YouTube Kids</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="py-2 border-b">
+            <ul>
+              <li>
+                <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+</svg>
+                  <span>Creator Academy</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
+                  <svg class="h-6 w-6 mr-3 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd" />
+                  </svg>
+                  <span>YouTube for Artist</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
       </button>
 
       <button>
@@ -313,7 +368,7 @@
         <a class="mr-2" href="#">Terms</a>
         <a class="mr-2" href="#">Privacy</a>
         <a class="mr-2" href="#">Policy & Safety</a>
-        <a class="mr-2" href="#">How YuoTube works</a>
+        <a class="mr-2" href="#">How YouTube works</a>
         <a class="mr-2" href="#">Test new features</a>
       </div>
 
@@ -627,7 +682,7 @@
           <a class="mr-2" href="#">Terms</a>
           <a class="mr-2" href="#">Privacy</a>
           <a class="mr-2" href="#">Policy & Safety</a>
-          <a class="mr-2" href="#">How YuoTube works</a>
+          <a class="mr-2" href="#">How YouTube works</a>
           <a class="mr-2" href="#">Test new features</a>
         </div>
 
