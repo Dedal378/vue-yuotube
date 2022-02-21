@@ -6,13 +6,13 @@
   <header class="flex justify-between fixed z-30 w-full">
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
-        <button class="mr-3 sm:ml-2 sm:mr-6">
+        <button class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
         </button>
 
-        <a href="/">
+        <a href="#">
           <svg class="w-20" viewBox="0 0 492 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M154.3 17.5a19.6 19.6 0 0 0-13.8-13.8C128.4.4 79.7.4 79.7.4S31 .5 18.9 3.8A19.6 19.6 0 0 0 5.1 17.6C1.44 39.1.02 71.86 5.2 92.5A19.6 19.6 0 0 0 19 106.3c12.1 3.3 60.8 3.3 60.8 3.3s48.7 0 60.8-3.3a19.6 19.6 0 0 0 13.8-13.8c3.86-21.53 5.05-54.27-.1-75z" fill="red" />
             <path d="M64.2 78.4L104.6 55 64.2 31.6z" fill="#fff" />
@@ -31,14 +31,14 @@
       <div class="flex w-full h-full">
         <input class="px-3 w-full border border-gray-300 shadow-inner rounded-bl-sm rounded-tl-sm focus:border-blue-700 focus:outline-none" placeholder="Search" type="text">
 
-        <button class="flex items-center px-6 py-1 text-gray-600 bg-gray-100 border border-l-0 border-gray-300 rounded-tr-sm rounded-br-sm hover:bg-gray-200">
+        <button class="flex items-center px-6 py-1 text-gray-600 bg-gray-100 border border-l-0 border-gray-300 rounded-tr-sm rounded-br-sm hover:bg-gray-200 focus:outline-none">
           <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
         </button>
       </div>
 
-      <button class="ml-4">
+      <button class="ml-4 focus:outline-none">
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" fill-rule="evenodd" />
         </svg>
@@ -46,13 +46,13 @@
     </div>
 
     <div class="flex items-center justify-end lg:w-1/4 space-x-4 sm:space-x-5 p-2 sm:px-4 ">
-      <button class="sm:hidden">
+      <button class="sm:hidden focus:outline-none">
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
       </button>
 
-      <button class="sm:hidden">
+      <button class="sm:hidden focus:outline-none">
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" fill-rule="evenodd" />
         </svg>
@@ -223,7 +223,7 @@
         </div>
       </button>
 
-      <button class="flex items-center whitespace-nowrap px-2 py-1 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm">
+      <button class="flex items-center whitespace-nowrap px-2 py-1 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none">
         <svg class="h-7 w-7 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" fill-rule="evenodd" />
         </svg>
@@ -290,7 +290,7 @@
       <span class="text-sm">
         Sign in to like videos, comment, and subscribe.
       </span>
-      <button class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm">
+      <button class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none">
         <svg class="h-7 w-7 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" fill-rule="evenodd" />
         </svg>
@@ -528,13 +528,13 @@
   <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-30">
     <aside class="w-64 max-h-screen overflow-auto bg-white">
       <section class="flex items-center p-4 border-b sticky top-0 bg-white">
-        <button class="ml-2 mr-6">
+        <button class="ml-2 mr-6 focus:outline-none">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
         </button>
 
-        <a href="/">
+        <a href="#">
           <svg class="w-20" viewBox="0 0 492 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M154.3 17.5a19.6 19.6 0 0 0-13.8-13.8C128.4.4 79.7.4 79.7.4S31 .5 18.9 3.8A19.6 19.6 0 0 0 5.1 17.6C1.44 39.1.02 71.86 5.2 92.5A19.6 19.6 0 0 0 19 106.3c12.1 3.3 60.8 3.3 60.8 3.3s48.7 0 60.8-3.3a19.6 19.6 0 0 0 13.8-13.8c3.86-21.53 5.05-54.27-.1-75z" fill="red" />
             <path d="M64.2 78.4L104.6 55 64.2 31.6z" fill="#fff" />
@@ -604,7 +604,7 @@
           Sign in to like videos, comment, and subscribe.
         </span>
 
-        <button class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm">
+        <button class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none">
           <svg class="h-7 w-7 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" fill-rule="evenodd" />
           </svg>
