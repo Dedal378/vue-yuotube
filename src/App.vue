@@ -266,7 +266,7 @@
   <!--***************************-->
 
 
-  <!--ASIDE-->
+  <!--SIDEBAR-->
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
     <section class="py-2 border-b">
       <ul>
@@ -508,7 +508,7 @@
     </section>
   </aside>
 
-  <!--mob sidebar-->
+  <!--mob small SIDEBAR-->
   <aside class="min-h-screen hidden md:block xl:hidden fixed z-20 top-0 overflow-auto pt-14 bg-white">
     <section class="">
       <ul>
@@ -823,6 +823,7 @@
     </aside>
   </div>
   <!--***************************-->
+
 
   <!--MAIN-->
   <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
