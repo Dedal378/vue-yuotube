@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <header class="flex fixed z-30 w-full bg-white bg-opacity-55">
+  <header class="flex fixed z-30 w-full">
     <div class="flex items-center w-1/4 pl-4">
       <button class="pl-2 pr-6">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
