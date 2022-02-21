@@ -67,8 +67,8 @@
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
-        <!--TODO: переделать такое нельзя допускать-->
-        <div class="opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
+        <!--TODO: переделать, скрыл-->
+        <div class="hidden opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
           <section class="py-2 border-b">
             <ul>
               <li>
@@ -131,8 +131,8 @@
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
-        <!--TODO: переделать такое нельзя допускать, второй список-->
-        <div class="opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
+        <!--TODO: переделать, скрыл, второй список-->
+        <div class="hidden opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
           <section class="py-2 border-b">
             <ul>
               <li>
