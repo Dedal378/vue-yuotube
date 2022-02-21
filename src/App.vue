@@ -2,6 +2,7 @@
 </script>
 
 <template>
+  <!--HEADER-->
   <header class="flex justify-between fixed z-30 w-full">
     <div class="lg:w-1/4 flex">
       <div class="flex items-center w-64 xl:bg-white pl-4">
@@ -26,7 +27,7 @@
       </div>
     </div>
 
-    <div class="hidden sm:flex items-center p-2.5 lg:w-1/2 max-w-screen-md">
+    <div class="hidden sm:flex items-center justify-end p-2.5 lg:w-1/2 max-w-screen-md">
       <div class="flex w-full h-full">
         <input class="px-3 w-full border border-gray-300 shadow-inner rounded-bl-sm rounded-tl-sm focus:border-blue-700 focus:outline-none" placeholder="Search" type="text">
 
@@ -66,6 +67,8 @@
     </div>
   </header>
 
+
+  <!--ASIDE-->
   <aside class="min-h-screen hidden md:block xl:hidden fixed z-20 top-0 overflow-auto pt-14 bg-white">
     <section class="">
       <ul>
@@ -355,6 +358,8 @@
     </section>
   </aside>
 
+
+  <!--HEADER TAGS-->
   <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
     <div class="border-t border-b">
       <div class="px-4 py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap max-w-screen-2xl m-auto">
@@ -383,6 +388,8 @@
     </div>
   </section>
 
+
+  <!--MAIN-->
   <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-screen-2xl m-auto">
       <a class="mb-7 group" href="#">
