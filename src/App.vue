@@ -4,6 +4,7 @@
 <template>
   <!--HEADER-->
   <header class="flex justify-between fixed z-30 w-full">
+    <!--left-->
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
         <button class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
@@ -27,6 +28,7 @@
       </div>
     </div>
 
+    <!--center-->
     <div class="hidden sm:flex flex-1 items-center justify-end p-2.5 pl-8 md:pl-12 md:px-8 lg:px-0 lg:w-1/2 max-w-screen-md">
       <div class="flex w-full h-full">
         <input class="px-3 w-full border border-gray-300 shadow-inner rounded-bl-sm rounded-tl-sm focus:border-blue-700 focus:outline-none" placeholder="Search" type="text">
@@ -45,14 +47,15 @@
       </button>
     </div>
 
-    <div class="flex items-center justify-end lg:w-1/4 space-x-4 sm:space-x-5 p-2 sm:px-4 ">
-      <button class="sm:hidden focus:outline-none">
+    <!--right-->
+    <div class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4 ">
+      <button class="sm:hidden p-2 focus:outline-none">
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
       </button>
 
-      <button class="sm:hidden focus:outline-none">
+      <button class="sm:hidden p-2 focus:outline-none">
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" fill-rule="evenodd" />
         </svg>
@@ -128,7 +131,7 @@
           <path d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
         <!--TODO: переделать такое нельзя допускать, второй список-->
-        <div class="opacity-0 group-hover:opacity-100 absolute right-0 top-9 bg-white w-72 border border-t-0">
+        <div class="opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
           <section class="py-2 border-b">
             <ul>
               <li>
@@ -232,6 +235,36 @@
     </div>
   </header>
 
+  <!--HEADER TAGS-->
+  <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
+    <div class="border-t border-b px-4 max-w-screen-2xl m-auto">
+      <div class="py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap">
+        <a class="px-3 py1 bg-gray-600 border border-gray-700 rounded-full hover:bg-gray-500 text-white transition" href="#">All</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Trucks</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tool</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Machines</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Engines</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Snow</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Ships</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Roads</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tanks</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Buildings</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Mars</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Woodworking</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tractors</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Songs</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">TV Show</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Football</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Planes</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Lives</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Streets</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Math</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Programming</a>
+      </div>
+    </div>
+  </section>
+  <!--***************************-->
+
 
   <!--ASIDE-->
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
@@ -239,7 +272,7 @@
       <ul>
         <li>
           <a class="flex items-center px-6 py-2 text-sm font-medium text-gray-800 bg-gray-200 hover:border-gray-300" href="#">
-            <svg class="h-6 w-6 mr-6 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg class="h-6 w-6 mr-6 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
             <span>Home</span>
@@ -552,7 +585,7 @@
         <ul>
           <li>
             <a class="flex items-center px-6 py-2 text-sm font-medium text-gray-800 bg-gray-200 hover:border-gray-300" href="#">
-              <svg class="h-6 w-6 mr-6 text-red-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg class="h-6 w-6 mr-6 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
               </svg>
               <span>Home</span>
@@ -789,37 +822,7 @@
       </section>
     </aside>
   </div>
-
-
-  <!--HEADER TAGS-->
-  <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
-    <div class="border-t border-b">
-      <div class="px-4 py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap max-w-screen-2xl m-auto">
-        <a class="px-3 py1 bg-gray-600 border border-gray-700 rounded-full hover:bg-gray-500 text-white transition" href="#">All</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Trucks</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tool</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Machines</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Engines</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Snow</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Ships</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Roads</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tanks</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Buildings</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Mars</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Woodworking</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tractors</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Songs</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">TV Show</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Football</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Planes</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Lives</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Streets</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Math</a>
-        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Programming</a>
-      </div>
-    </div>
-  </section>
-
+  <!--***************************-->
 
   <!--MAIN-->
   <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
