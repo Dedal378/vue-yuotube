@@ -4,6 +4,8 @@
 
 <template>
   <!--MAIN PAGE-->
+  <!--***************************-->
+
   <!--HEADER-->
   <header class="flex justify-between fixed z-30 w-full">
     <!--left-->
@@ -510,7 +512,7 @@
     </section>
   </aside>
 
-  <!--mob small SIDEBAR-->
+  <!--mob small sidebar-->
   <aside class="min-h-screen hidden md:block xl:hidden fixed z-20 top-0 overflow-auto pt-14 bg-white">
     <section class="">
       <ul>
@@ -1407,4 +1409,5 @@
       </a>
     </div>
   </main>
+  <!--***************************-->
 </template>
