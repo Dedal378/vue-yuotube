@@ -3,11 +3,9 @@
 </script>
 
 <template>
-  <!--CHANNEL PAGE-->
-  <!--***************************-->
+  <!--____CHANNEL PAGE-->
 
-
-  <!--HEADER-->
+  <!--_HEADER-->
   <header class="flex justify-between fixed z-30 w-full bg-white">
     <!--left-->
     <div class="lg:w-1/4 flex">
@@ -239,10 +237,10 @@
       </button>
     </div>
   </header>
-  <!------------------------------->
+  <!--end-->
 
 
-  <!--SIDEBAR-->
+  <!--_SIDEBAR-->
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
     <section class="py-2 border-b">
       <ul>
@@ -798,10 +796,10 @@
       </section>
     </aside>
   </div>
-  <!------------------------------->
+  <!--end-->
 
 
-  <!--MAIN (channel page)-->
+  <!--_MAIN (channel page)-->
   <main class="md:ml-24 xl:ml-64 pt-14">
     <!--title image background-->
     <div class="main__img relative h-52 bg-center bg-cover">
@@ -844,47 +842,92 @@
       </div>
     </div>
 
-    <!--subscription-->
-    <div class="flex justify-between items-center max-w-screen-2xl px-24 pt-4">
+    <!--channel navigation-->
+    <div class="max-w-screen-2xl px-24 pt-4">
+      <!--subscription-->
+      <div class="flex justify-between items-center">
 
-      <div class="flex items-center">
-        <img alt="image" class="h-16 rounded-full mr-5" src="https://picsum.photos/id/1027/68">
-        <div>
-          <div class="flex items-center">
-            <span class="text-2xl text-gray-800">Cities in 4k</span>
-            <svg class="h-4 w-4 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
-            </svg>
+        <div class="flex items-center">
+          <img alt="image" class="h-16 rounded-full mr-5" src="https://picsum.photos/id/1027/68">
+          <div>
+            <div class="flex items-center">
+              <span class="text-2xl text-gray-800">Cities in 4k</span>
+              <svg class="h-4 w-4 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="text-xs">120k subscribers</div>
           </div>
-          <div class="text-xs">120k subscribers</div>
         </div>
+
+        <button class="bg-red-600 text-xs text-white uppercase py-2 px-4 rounded-sm focus:outline-none">
+          Subscribe
+        </button>
       </div>
 
-      <button class="bg-red-600 text-xs text-white uppercase py-2 px-4 rounded-sm focus:outline-none">
-        Subscribe
-      </button>
-    </div>
-
-    <!--channel navigation-->
-    <div class="flex items-center px-24">
-      <nav class="mt-2">
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 text-gray-900 border-b-2 border-gray-700 py-3" href="#">Home</a>
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Videos</a>
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Playlist</a>
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Community</a>
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Channels</a>
-        <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">About</a>
-      </nav>
-      <!--search input-->
-      <div class="flex items-center ml-6">
-        <svg class="h-4 w-4 mr-2 mt-1.5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fill-rule="evenodd" />
-        </svg>
-        <input class="border-b border-gray-700 text-xs py-1 focus:outline-none w-36 bg-transparent" placeholder="Search" type="text">
+      <!--menu-->
+      <div class="flex items-center px-24">
+        <nav class="mt-2">
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 text-gray-900 border-b-2 border-gray-700 py-3" href="#">Home</a>
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Videos</a>
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Playlist</a>
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Community</a>
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Channels</a>
+          <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">About</a>
+        </nav>
+        <!--search-->
+        <div class="flex items-center ml-6">
+          <svg class="h-4 w-4 mr-2 mt-1.5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fill-rule="evenodd" />
+          </svg>
+          <input class="border-b border-gray-700 text-xs py-1 focus:outline-none w-36 bg-transparent" placeholder="Search" type="text">
+        </div>
       </div>
     </div>
   </main>
-  <!------------------------------->
+  <!--end-->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
 </template>
 
 <style>
