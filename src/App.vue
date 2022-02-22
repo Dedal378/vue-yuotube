@@ -5,7 +5,7 @@
 <template>
   <!--____CHANNEL PAGE-->
 
-  <!--_HEADER-->
+  <!--HEADER-->
   <header class="flex justify-between fixed z-30 w-full bg-white">
     <!--left-->
     <div class="lg:w-1/4 flex">
@@ -237,10 +237,9 @@
       </button>
     </div>
   </header>
-  <!--end-->
 
 
-  <!--_SIDEBAR-->
+  <!--SIDEBAR-->
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
     <section class="py-2 border-b">
       <ul>
@@ -796,12 +795,11 @@
       </section>
     </aside>
   </div>
-  <!--end-->
 
 
-  <!--_MAIN (channel page)-->
+  <!--MAIN (channel page)-->
   <main class="md:ml-24 xl:ml-64 pt-14">
-    <!--title image background-->
+    <!--title image-->
     <div class="main__img relative h-52 bg-center bg-cover">
       <div class="absolute bottom-3 right-4 bg-black bg-opacity-10 p-2">
         <a class="flex items-center" href="#">
@@ -885,7 +883,7 @@
       </div>
     </div>
   </main>
-  <!--end-->
+  <!---->
   <!---->
   <!---->
   <!---->

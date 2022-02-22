@@ -1,7 +1,7 @@
 <template>
   <!--____MAIN PAGE-->
 
-  <!--_HEADER-->
+  <!--HEADER-->
   <header class="flex justify-between fixed z-30 w-full">
     <!--left-->
     <div class="lg:w-1/4 flex">
@@ -262,10 +262,9 @@
       </div>
     </div>
   </section>
-  <!--end-->
 
 
-  <!--_SIDEBAR-->
+  <!--SIDEBAR-->
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
     <section class="py-2 border-b">
       <ul>
@@ -821,10 +820,9 @@
       </section>
     </aside>
   </div>
-  <!--end-->
 
 
-  <!--_MAIN-->
+  <!--MAIN-->
   <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-screen-2xl m-auto">
       <a class="mb-7 group" href="#">
@@ -1404,5 +1402,4 @@
       </a>
     </div>
   </main>
-  <!--end-->
 </template>
