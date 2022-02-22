@@ -841,7 +841,7 @@
     </div>
 
     <!--channel navigation-->
-    <div class="max-w-screen-2xl px-24 pt-4">
+    <div class="max-w-screen-2xl px-14 pt-4">
       <!--subscription-->
       <div class="flex justify-between items-center">
 
@@ -864,7 +864,7 @@
       </div>
 
       <!--menu-->
-      <div class="flex items-center px-24">
+      <div class="flex items-center">
         <nav class="mt-2">
           <a class="px-6 uppercase text-xs font-medium text-gray-500 text-gray-900 border-b-2 border-gray-700 py-3" href="#">Home</a>
           <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3" href="#">Videos</a>
@@ -882,6 +882,8 @@
         </div>
       </div>
     </div>
+
+
   </main>
   <!---->
   <!---->
