@@ -1,12 +1,8 @@
-<script setup>
-
-</script>
-
 <template>
-  <!--____CHANNEL PAGE-->
+  <!--____MAIN PAGE-->
 
   <!--HEADER-->
-  <header class="flex justify-between fixed z-30 w-full bg-white">
+  <header class="flex justify-between fixed z-30 w-full">
     <!--left-->
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
@@ -70,7 +66,7 @@
           <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
         <!--TODO: переделать-->
-        <div class="hidden opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
+        <div class="opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
           <section class="py-2 border-b">
             <ul>
               <li>
@@ -134,7 +130,7 @@
           <path d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
         <!--TODO: переделать, второй список-->
-        <div class="hidden opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
+        <div class="opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
           <section class="py-2 border-b">
             <ul>
               <li>
@@ -237,6 +233,35 @@
       </button>
     </div>
   </header>
+
+  <!--header tags-->
+  <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
+    <div class="border-t border-b px-4 max-w-screen-2xl m-auto">
+      <div class="py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap">
+        <a class="px-3 py1 bg-gray-600 border border-gray-700 rounded-full hover:bg-gray-500 text-white transition" href="#">All</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Trucks</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tool</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Machines</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Engines</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Snow</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Ships</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Roads</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tanks</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Buildings</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Mars</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Woodworking</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Tractors</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Songs</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">TV Show</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Football</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Planes</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Lives</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Streets</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Math</a>
+        <a class="px-3 py1 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200 transition" href="#">Programming</a>
+      </div>
+    </div>
+  </section>
 
 
   <!--SIDEBAR-->
@@ -797,519 +822,592 @@
   </div>
 
 
-  <!--MAIN (channel page)-->
-  <main class="md:ml-24 xl:ml-64 pt-14 bg-gray-100">
-    <!--title image-->
-    <div class="main__img h-20 sm:h-32 md:h-40 xl:h-44 2xl:h-80 bg-center bg-cover relative">
-      <div class="absolute bottom-4 right-4 bg-black bg-opacity-50 sm:bg-opacity-30 p-3 sm:p-2">
-        <a class="flex items-center" href="#">
-          <svg class="w-5 h-5 mr-2" viewBox="0 0 132.004 132" xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-              <radialGradient cx="158.429" cy="578.088" fx="158.429" fy="578.088" gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)"
-                              gradientUnits="userSpaceOnUse"
-                              id="c"
-                              r="65" xlink:href="#a" />
-              <radialGradient cx="147.694" cy="473.455" fx="147.694" fy="473.455" gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)"
-                              gradientUnits="userSpaceOnUse"
-                              id="d"
-                              r="65" xlink:href="#b" />
-              <linearGradient id="b">
-                <stop offset="0" stop-color="#3771c8" />
-                <stop offset=".128" stop-color="#3771c8" />
-                <stop offset="1" stop-color="#60f" stop-opacity="0" />
-              </linearGradient>
-              <linearGradient id="a">
-                <stop offset="0" stop-color="#fd5" />
-                <stop offset=".1" stop-color="#fd5" />
-                <stop offset=".5" stop-color="#ff543e" />
-                <stop offset="1" stop-color="#c837ab" />
-              </linearGradient>
-            </defs>
-            <path d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
-                  fill="url(#c)"
-                  transform="translate(1.004 1)" />
-            <path d="M65.03 0C37.888 0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176 0 11.988 0 21.125 0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42 0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28a27.22 27.22 0 0017.75-14.53c1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81 0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19 0H65.03z"
-                  fill="url(#d)"
-                  transform="translate(1.004 1)" />
-            <path d="M66.004 18c-13.036 0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037 0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788 0-13.036-.06-14.672-.29-19.792-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704 0 4.306 0 12.816 0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817 0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97a5.76 5.76 0 105.76 5.758c0-3.18-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613 0-24.65 11.037-24.65 24.65 0 13.613 11.037 24.645 24.65 24.645C79.617 90.645 90.65 79.613 90.65 66S79.616 41.35 66.003 41.35zm0 8.65c8.836 0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837 0-16-7.164-16-16 0-8.837 7.163-16 16-16z"
-                  fill="#fff" />
-          </svg>
-          <span class="text-white text-xs font-semibold">Follow us on INSTAGRAM</span>
-        </a>
-      </div>
-    </div>
+  <!--MAIN-->
+  <main class="md:ml-24 xl:ml-64 pt-32 px-5 pb-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 max-w-screen-2xl m-auto">
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
 
-    <!--channel navigation-->
-    <div class="px-20 sm:px-14 md:px-6 pt-4 bg-gray-50">
-      <div class="max-w-screen-xl m-auto">
-        <!--subscription-->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 xl:mb-0">
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
 
-          <div class="flex items-center">
-            <img alt="image" class="h-16 rounded-full mr-5 hidden md:inline" src="https://picsum.photos/id/1027/68">
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar1/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
             <div>
-              <div class="flex items-center">
-                <span class="text-2xl text-gray-800">Cities in 4k</span>
-                <svg class="h-4 w-4 ml-2 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="text-xs">120k subscribers</div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
             </div>
           </div>
 
-          <button class="bg-red-600 text-xs text-white uppercase mt-2 xl:mt-0 py-2 px-4 rounded-sm focus:outline-none">
-            Subscribe
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
           </button>
         </div>
+      </a>
 
-        <!--menu-->
-        <div class="flex items-center">
-          <nav class="mt-2">
-            <a class="px-6 uppercase text-xs font-medium text-gray-900 border-b-2 border-gray-700 py-3 inline-block" href="#">Home</a>
-            <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3 inline-block" href="#">Videos</a>
-            <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3 hidden sm:inline-block" href="#">Playlist</a>
-            <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3 hidden sm:inline-block" href="#">Community</a>
-            <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3 hidden sm:inline-block" href="#">Channels</a>
-            <a class="px-6 uppercase text-xs font-medium text-gray-500 hover:text-gray-900 py-3 hidden sm:inline-block" href="#">About</a>
-          </nav>
-          <!--search-->
-          <div class="hidden xl:flex items-center ml-6">
-            <svg class="h-4 w-4 mr-2 mt-1.5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fill-rule="evenodd" />
-            </svg>
-            <input class="border-b border-gray-700 text-xs py-1 focus:outline-none w-36 bg-transparent" placeholder="Search" type="text">
-          </div>
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum2/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
         </div>
-      </div>
-    </div>
 
-    <!--video-->
-    <div class="max-w-screen-xl m-auto px-20 sm:px-14 md:px-6 2xl:px-0">
-      <!--title-->
-      <div class="flex flex-col md:flex-row py-6">
-        <img alt="building" class="sm:max-w-sm max-h-60" src="https://picsum.photos/id/1048/720/404">
 
-        <div class="md:pl-6 mt-3 md:mt-0 max-w-md flex flex-col justify-between items-start">
-          <div>
-            <span class="font-semibold text-gray-900 text-sm">Video title</span>
-            <div class="text-xs mt-1 xl:my-4">186,732 views &middot; 1 day ago</div>
-            <div class="text-sm text-black hidden md:block">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloremque, fuga. Aliquam, aspernatur dolores ea iste laboriosam natus rerum veritatis voluptatem! Ducimus odit rerum totam!
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar2/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
             </div>
           </div>
 
-          <a class="uppercase font-medium text-xs hover:text-black hidden md:inline" href="#">Reade more</a>
-        </div>
-      </div>
-
-      <!--videos list 1-->
-      <div class="border-t border-gray-300 pt-5">
-        <div class="flex">
-          <a class="font-semibold text-gray-900 mr-6 text-sm" href="#">Uploads</a>
-
-          <a class="flex items-center" href="#">
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd" />
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
             </svg>
-            <span class="ml-2 uppercase text-xs font-medium">Play All</span>
-          </a>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum3/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
         </div>
 
-        <div class="relative mt-5 mb-7">
-          <a class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-12 xl:top-8 -left-4 z-10 flex justify-center items-center" href="#">
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd" />
-            </svg>
-          </a>
-          <a class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-12 xl:top-8 -right-4 z-10 flex justify-center items-center" href="#">
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd" />
-            </svg>
-          </a>
 
-          <div class="flex space-x-1">
-            <a class="group" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar3/68">
 
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
 
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!--videos list 2-->
-      <div class="border-t border-gray-300 pt-5">
-        <div class="flex">
-          <div class="flex items-center">
-            <a class="font-semibold text-gray-900 mr-6 text-sm" href="#">Popular Uploads</a>
-
-            <a class="flex items-center" href="#">
-              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd" />
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
               </svg>
-              <span class="ml-2 uppercase text-xs font-medium">Play All</span>
-            </a>
-          </div>
-        </div>
+            </div>
 
-        <div class="relative mt-5 mb-7">
-          <a class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-12 xl:top-8 -left-4 z-10 flex justify-center items-center" href="#">
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" fill-rule="evenodd" />
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
             </svg>
-          </a>
-          <a class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-12 xl:top-8 -right-4 z-10 flex justify-center items-center" href="#">
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum4/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar4/6">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" fill-rule="evenodd" />
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
             </svg>
-          </a>
-
-          <div class="flex space-x-1">
-            <a class="group" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                   </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a class="group hidden sm:inline" href="#">
-              <div class="relative">
-                <img alt="image" src="https://picsum.photos/seed/picsum/720/404">
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">
-                  6:35
-                </span>
-              </div>
-
-              <div class="flex items-start mt-3">
-                <div class="text-xs whitespace-nowrap">
-                  <span class="font-semibold text-gray-800">Video title 1</span>
-                  <div class="mt-1.5">1k views &middot; 1 day ago</div>
-                </div>
-                <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-            </a>
-          </div>
+          </button>
         </div>
-      </div>
+      </a>
 
-      <!--footer-->
-      <div class="border-t border-gray-300 pt-5 pb-10 relative">
-        <a class="font-semibold text-gray-900 text-sm" href="#">Featured channels</a>
-        <a href="#" class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-24 xl:top-8 -left-4 z-10 flex justify-center items-center sm:hidden">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </a>
-        <a href="#" class="bg-white rounded-full shadow-xl w-9 h-9 absolute top-24 xl:top-8 -right-4 z-10 flex justify-center items-center sm:hidden">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum5/720/404">
 
-        <div class="mt-6 flex">
-          <div class="flex flex-col items-center w-full sm:w-1/3 md:w-1/4 xl:w-1/5 2xl:w-1/6">
-            <a href="#" class="w-full flex flex-col items-center">
-              <img src="https://picsum.photos/seed/avatar1/256" alt="" class="rounded-full w-24">
-              <span class="font-semibold text-gray-800 mt-2 mb-4 text-xs">Channel name</span>
-            </a>
-            <button class="bg-gray-200 uppercase py-1 px-2 text-xs font-medium rounded-sm">Subscribe</button>
-          </div>
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
 
-          <div class="hidden sm:flex flex-col items-center sm:w-1/3 md:w-1/4 xl:w-1/5 2xl:w-1/6">
-            <a href="#" class="w-full flex flex-col items-center">
-              <img src="https://picsum.photos/seed/avatar2/256" alt="" class="rounded-full w-24">
-              <span class="font-semibold text-gray-800 mt-2 mb-4 text-xs">Channel name</span>
-            </a>
-            <button class="bg-gray-200 uppercase py-1 px-2 text-xs font-medium rounded-sm">Subscribe</button>
-          </div>
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
         </div>
-      </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar5/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum6/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar6/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum7/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar7/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum8/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar8/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum9/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar9/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum10/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+        </svg>
+        </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar10/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum11/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+            </svg>
+          </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+          </svg>
+          </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar11/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a class="mb-7 group" href="#">
+        <div class="relative">
+          <img alt="image" src="https://picsum.photos/seed/picsum12/720/404">
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-0 right-0 bg-black text-white rounded-sm m-1 p-1">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fill-rule="evenodd" />
+            </svg>
+          </span>
+
+          <span class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" fill-rule="evenodd" />
+            </svg>
+         </span>
+
+          <span class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold">6:35</span>
+        </div>
+
+
+        <div class="flex items-start mt-3">
+          <img alt="image" class="mr-3 rounded-full w-9 h-9" src="https://picsum.photos/seed/avatar12/68">
+
+          <div class="text-xs whitespace-nowrap">
+            <span class="font-semibold text-gray-800">Video title 1</span>
+
+            <div class="flex items-center mt-1">
+              <span class="mb-1">Channel name 1</span>
+              <svg class="h-3.5 w-3.5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd" />
+              </svg>
+            </div>
+
+            <div>
+              <span>1k views</span>
+              &middot;
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <button class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </button>
+        </div>
+      </a>
     </div>
   </main>
 </template>
 
-<style>
-.main__img {
-  background-image: url('https://picsum.photos/id/1029/1200/600');
-}
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
 </style>
