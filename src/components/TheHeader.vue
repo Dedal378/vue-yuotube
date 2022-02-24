@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'TheHeader',
+};
+</script>
+
 <template>
   <header class="flex justify-between fixed z-30 w-full">
     <!--left-->
@@ -532,7 +538,3 @@
     </div>
   </header>
 </template>
-
-<script setup></script>
-
-<style lang="scss" scoped></style>
