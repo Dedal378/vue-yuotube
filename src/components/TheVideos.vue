@@ -1,10 +1,5 @@
-<script>
+<script setup>
 import VideoItem from './VideoItem.vue'
-
-export default {
-  name: 'TheVideos',
-  components: { VideoItem },
-}
 </script>
 
 <template>

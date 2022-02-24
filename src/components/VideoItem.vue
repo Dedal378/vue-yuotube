@@ -1,3 +1,15 @@
+<script setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  index: {
+    type: Number,
+    requeue: true,
+    default: 1,
+  },
+})
+</script>
+
 <template>
   <a class="mb-7 group" href="#">
     <div class="relative">
@@ -97,15 +109,3 @@
     </div>
   </a>
 </template>
-<script>
-export default {
-  name: 'VideoItem',
-  props: {
-    index: {
-      type: Number,
-      requeue: true,
-      default: 1,
-    },
-  },
-}
-</script>
