@@ -26,7 +26,6 @@ defineProps({
           />
         </svg>
       </span>
-
       <span
         class="absolute opacity-0 group-hover:opacity-100 bg-opacity-60 top-8 right-0 bg-black text-white rounded-sm m-1 p-1"
       >
@@ -38,7 +37,6 @@ defineProps({
           />
         </svg>
       </span>
-
       <span
         class="absolute opacity-100 group-hover:opacity-0 duration-500 bottom-0 right-0 bg-black text-white rounded-sm m-1 p-1 text-xs font-semibold"
       >
