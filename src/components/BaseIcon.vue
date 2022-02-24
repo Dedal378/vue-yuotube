@@ -13,10 +13,9 @@ const path = icons[props.name]
 
 <template>
   <svg
-    class="h-6 w-6"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
+    :class="$attrs.class || 'h-6 w-6'"
+    fill="currentColor"
+    viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
     v-html="path"
   ></svg>
