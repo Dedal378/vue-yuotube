@@ -1,11 +1,6 @@
-<script>
+<script setup>
 // import TheDropdownApps from './TheDropdownApps.vue'
 // import TheDropdownSettings from './TheDropdownSettings.vue'
-
-export default {
-  name: 'TheHeader',
-  // components: { TheDropdownSettings, TheDropdownApps },
-}
 </script>
 
 <template>
@@ -14,19 +9,8 @@ export default {
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
         <button class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 6h16M4 12h16M4 18h16"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
         </button>
 
@@ -75,13 +59,7 @@ export default {
         <button
           class="flex items-center px-6 py-1 text-gray-600 bg-gray-100 border border-l-0 border-gray-300 rounded-tr-sm rounded-br-sm hover:bg-gray-200 focus:outline-none"
         >
-          <svg
-            class="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               stroke-linecap="round"
@@ -93,12 +71,7 @@ export default {
       </div>
 
       <button class="ml-4 focus:outline-none">
-        <svg
-          class="h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             clip-rule="evenodd"
             d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
@@ -109,17 +82,9 @@ export default {
     </div>
 
     <!--right-->
-    <div
-      class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4"
-    >
+    <div class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4">
       <button class="sm:hidden p-2 focus:outline-none">
-        <svg
-          class="h-5 w-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             stroke-linecap="round"
@@ -130,12 +95,7 @@ export default {
       </button>
 
       <button class="sm:hidden p-2 focus:outline-none">
-        <svg
-          class="h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             clip-rule="evenodd"
             d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
@@ -146,12 +106,7 @@ export default {
 
       <!--pop-up btn list 1-->
       <button class="relative group p-2 focus:outline-none">
-        <svg
-          class="h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
           />
@@ -162,13 +117,7 @@ export default {
 
       <!--pop-up btn list 2-->
       <button class="relative group p-2 focus:outline-none">
-        <svg
-          class="h-5 w-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
             stroke-linecap="round"
@@ -183,12 +132,7 @@ export default {
       <button
         class="flex items-center whitespace-nowrap px-2 py-1 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none"
       >
-        <svg
-          class="h-7 w-7 mr-2"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="h-7 w-7 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path
             clip-rule="evenodd"
             d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"

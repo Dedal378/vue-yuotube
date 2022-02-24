@@ -1,14 +1,11 @@
+<script setup></script>
+
 <template>
-  <div
-    class="opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0"
-  >
+  <div class="opacity-0 group-hover:opacity-100 absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
     <section class="py-2 border-b">
       <ul>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-red-500"
               fill="currentColor"
@@ -30,10 +27,7 @@
     <section class="py-2 border-b">
       <ul>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-red-500"
               fill="currentColor"
@@ -50,10 +44,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-red-500"
               fill="currentColor"
@@ -75,10 +66,7 @@
     <section class="py-2">
       <ul>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-red-500"
               fill="currentColor"
@@ -95,10 +83,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-3 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-3 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-red-500"
               fill="currentColor"
@@ -118,8 +103,3 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  name: 'TheDropdownApps',
-}
-</script>

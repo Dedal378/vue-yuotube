@@ -1,23 +1,18 @@
+<script setup></script>
+
 <template>
-  <div
-    class="opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0"
-  >
+  <div class="opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0">
     <section class="py-2 border-b">
       <ul>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              />
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
             <span>Appearance: Device theme</span>
             <svg
@@ -35,10 +30,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -67,10 +59,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -100,10 +89,7 @@
         </li>
 
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -120,10 +106,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -140,10 +123,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -160,10 +140,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -180,10 +157,7 @@
           </a>
         </li>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <svg
               class="h-6 w-6 mr-3 text-gray-400"
               fill="currentColor"
@@ -203,10 +177,7 @@
     <section class="py-2">
       <ul>
         <li>
-          <a
-            class="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
-            href="#"
-          >
+          <a class="flex items-center px-4 py-2 text-sm hover:bg-gray-100" href="#">
             <span>Restricted Mode: Off</span>
             <svg
               class="h-5 w-5 text-gray-400 ml-auto"
@@ -226,8 +197,3 @@
     </section>
   </div>
 </template>
-<script>
-export default {
-  name: 'TheDropdownSettings',
-}
-</script>
