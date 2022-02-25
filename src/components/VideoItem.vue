@@ -1,7 +1,7 @@
 <script setup>
-import VideoItemThumbnail from './VideoItemThumbnail.vue';
-import VideoItemInfo from './VideoItemInfo.vue';
-import { defineProps } from 'vue';
+import VideoItemThumbnail from './VideoItemThumbnail.vue'
+import VideoItemInfo from './VideoItemInfo.vue'
+import { defineProps } from 'vue'
 
 defineProps({
   index: {

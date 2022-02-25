@@ -23,6 +23,6 @@ const classes = computed(() => {
 
 <template>
   <a :class="classes" href="#">
-    {{ props.category }}
+    {{ category }}
   </a>
 </template>

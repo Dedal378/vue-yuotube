@@ -1,51 +1,26 @@
 <script setup>
+import { reactive } from 'vue'
 import BaseIcon from './BaseIcon.vue'
+import SidebarNavItem from './SidebarNavItem.vue'
+
+const listItems = reactive([
+  { label: 'Home', icon: 'home', isActive: true },
+  { label: 'Trending', icon: 'trending', isActive: false },
+  { label: 'Subscriptions', icon: 'subscriptions', isActive: false },
+])
 </script>
 
 <template>
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
     <section class="py-2 border-b">
       <ul>
-        <li>
-          <a
-            class="flex items-center px-6 py-2 text-sm font-medium text-gray-800 bg-gray-200 hover:border-gray-300"
-            href="#"
-          >
-            <svg
-              class="h-6 w-6 mr-6 text-red-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-              />
-            </svg>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a class="flex items-center px-6 py-2 text-sm hover:bg-gray-100" href="#">
-            <svg class="h-6 w-6 mr-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                clip-rule="evenodd"
-                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <span>Trending</span>
-          </a>
-        </li>
-        <li>
-          <a class="flex items-center px-6 py-2 text-sm hover:bg-gray-100" href="#">
-            <svg class="h-6 w-6 mr-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
-              />
-            </svg>
-            <span>Subscriptions</span>
-          </a>
-        </li>
+        <SidebarNavItem
+          v-for="listItem in listItems"
+          :key='listItem.label'
+          :label="listItem.label"
+          :icon="listItem.icon"
+          :is-active="listItem.isActive"
+        />
       </ul>
     </section>
     <section class="py-2 border-b">
