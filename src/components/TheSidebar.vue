@@ -16,7 +16,7 @@ const listItems = reactive([
       <ul>
         <SidebarNavItem
           v-for="listItem in listItems"
-          :key='listItem.label'
+          :key="listItem.label"
           :label="listItem.label"
           :icon="listItem.icon"
           :is-active="listItem.isActive"
