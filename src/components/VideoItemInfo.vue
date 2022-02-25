@@ -1,12 +1,18 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, computed } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 
-defineProps({
+const props = defineProps({
   index: {
     type: String,
     required: true,
   },
+})
+
+const summary = computed(() => {
+  const days = props.index === 1 ? 'day' : 'days'
+
+  return `${props.index}k views &middot; ${props.index} ${days} ago`
 })
 </script>
 
@@ -22,7 +28,7 @@ defineProps({
         <BaseIcon name="check" class="h-3.5 w-3.5 ml-1" />
       </div>
 
-      <div>{{ index }}k views &middot; {{ index }} day ago</div>
+      <div v-html="summary"></div>
     </div>
 
     <button
