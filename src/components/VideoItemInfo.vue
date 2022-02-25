@@ -15,18 +15,14 @@ defineProps({
     <img alt="image" class="mr-3 rounded-full w-9 h-9" :src="`https://picsum.photos/seed/avatar${index}/68`" />
 
     <div class="text-xs whitespace-nowrap">
-      <span class="font-semibold text-gray-800">Video title 1</span>
+      <span class="font-semibold text-gray-800">Video title {{ index }}</span>
 
       <div class="flex items-center mt-1">
-        <span class="mb-1">Channel name 1</span>
+        <span class="mb-1">Channel name {{ index }}</span>
         <BaseIcon name="check" class="h-3.5 w-3.5 ml-1" />
       </div>
 
-      <div>
-        <span>1k views</span>
-        &middot;
-        <span>1 day ago</span>
-      </div>
+      <div>{{ index }}k views &middot; {{ index }} day ago</div>
     </div>
 
     <button
