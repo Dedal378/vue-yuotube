@@ -7,6 +7,8 @@ const listItems = reactive([
   { label: 'Home', icon: 'home', isActive: true },
   { label: 'Trending', icon: 'trending', isActive: false },
   { label: 'Subscriptions', icon: 'subscriptions', isActive: false },
+  { label: 'Library', icon: 'library', isActive: false },
+  { label: 'History', icon: 'history', isActive: false },
 ])
 </script>
 
@@ -15,7 +17,7 @@ const listItems = reactive([
     <section class="py-2 border-b">
       <ul>
         <SidebarNavItem
-          v-for="listItem in listItems"
+          v-for="listItem in listItems.slice(0, 3)"
           :key="listItem.label"
           :label="listItem.label"
           :icon="listItem.icon"
@@ -25,27 +27,13 @@ const listItems = reactive([
     </section>
     <section class="py-2 border-b">
       <ul>
-        <li>
-          <a class="flex items-center px-6 py-2 text-sm hover:bg-gray-100" href="#">
-            <svg class="h-6 w-6 mr-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
-              <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
-            </svg>
-            <span>Library</span>
-          </a>
-        </li>
-        <li>
-          <a class="flex items-center px-6 py-2 text-sm hover:bg-gray-100" href="#">
-            <svg class="h-6 w-6 mr-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                clip-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <span>History</span>
-          </a>
-        </li>
+        <SidebarNavItem
+          v-for="listItem in listItems.slice(3)"
+          :key="listItem.label"
+          :label="listItem.label"
+          :icon="listItem.icon"
+          :is-active="listItem.isActive"
+        />
       </ul>
     </section>
     <section class="px-8 py-4 border-b font-medium leading-5">
