@@ -2,6 +2,7 @@
 import { reactive } from 'vue'
 import SidebarNavItem from './SidebarNavItem.vue'
 import ButtonLogin from './ButtonLogin.vue'
+import SidebarSectionHeading from './SidebarSectionHeading.vue'
 
 const listItems = reactive([
   { label: 'Home', icon: 'home', isActive: true },
@@ -62,7 +63,8 @@ const listItemsMore = reactive([
       />
     </section>
     <section class="py-2 border-b">
-      <div class="uppercase text-sm font-semibold px-6 py-2">Best of youtube</div>
+      <SidebarSectionHeading title="Best of youtube" />
+
       <ul>
         <SidebarNavItem
           v-for="listItem in listItemsBest"
@@ -96,7 +98,7 @@ const listItemsMore = reactive([
       </ul>
     </section>
     <section class="py-2 border-b">
-      <div class="uppercase text-sm font-semibold px-6 py-2">More from youtube</div>
+      <SidebarSectionHeading title="More from youtube" />
       <ul>
         <SidebarNavItem
           v-for="listItem in listItemsMore.slice(1, 3)"
