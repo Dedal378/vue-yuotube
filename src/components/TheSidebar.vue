@@ -3,6 +3,7 @@ import { reactive } from 'vue'
 import SidebarNavItem from './SidebarNavItem.vue'
 import ButtonLogin from './ButtonLogin.vue'
 import SidebarSectionHeading from './SidebarSectionHeading.vue'
+import SidebarSection from './SidebarSection.vue'
 
 const listItems = reactive([
   { label: 'Home', icon: 'home', isActive: true },
@@ -33,7 +34,7 @@ const listItemsMore = reactive([
 
 <template>
   <aside class="hidden xl:block w-64 max-h-screen fixed z-20 top-0 overflow-auto pt-12 bg-white">
-    <section class="py-2 border-b">
+    <SidebarSection>
       <ul>
         <SidebarNavItem
           v-for="listItem in listItems.slice(0, 3)"
@@ -43,7 +44,8 @@ const listItemsMore = reactive([
           :is-active="listItem.isActive"
         />
       </ul>
-    </section>
+    </SidebarSection>
+
     <section class="py-2 border-b">
       <ul>
         <SidebarNavItem
