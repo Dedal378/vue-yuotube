@@ -3,7 +3,6 @@ import { computed, useAttrs } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 
 const attrs = useAttrs()
-
 const classes = computed(() => {
   return (
     attrs.class ||

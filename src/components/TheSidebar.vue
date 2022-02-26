@@ -1,6 +1,5 @@
 <script setup>
 import { reactive } from 'vue'
-import BaseIcon from './BaseIcon.vue'
 import SidebarNavItem from './SidebarNavItem.vue'
 import ButtonLogin from './ButtonLogin.vue'
 
@@ -58,15 +57,9 @@ const listItemsMore = reactive([
     <section class="px-8 py-4 border-b font-medium leading-5">
       <span class="text-sm">Sign in to like videos, comment, and subscribe.</span>
 
-      <ButtonLogin  />
-
-      <button
-        class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700
-        uppercase border border-blue-700 rounded-sm focus:outline-none"
-      >
-        <BaseIcon name="user" class="h-7 w-7 mr-2" />
-        Sign in
-      </button>
+      <ButtonLogin
+        class="flex items-center whitespace-nowrap px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none"
+      />
     </section>
     <section class="py-2 border-b">
       <div class="uppercase text-sm font-semibold px-6 py-2">Best of youtube</div>
