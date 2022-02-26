@@ -46,7 +46,7 @@ const listItemsMore = reactive([
       </ul>
     </SidebarSection>
 
-    <section class="py-2 border-b">
+    <SidebarSection>
       <ul>
         <SidebarNavItem
           v-for="listItem in listItems.slice(3)"
@@ -56,17 +56,17 @@ const listItemsMore = reactive([
           :is-active="listItem.isActive"
         />
       </ul>
-    </section>
-    <section class="px-8 py-4 border-b font-medium leading-5">
-      <span class="text-sm">Sign in to like videos, comment, and subscribe.</span>
+    </SidebarSection>
 
+    <SidebarSection class="px-8 py-4 border-b font-medium leading-5">
+      <span class="text-sm">Sign in to like videos, comment, and subscribe.</span>
       <ButtonLogin
         class="flex items-center whitespace-nowrap px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none"
       />
-    </section>
-    <section class="py-2 border-b">
-      <SidebarSectionHeading title="Best of youtube" />
+    </SidebarSection>
 
+    <SidebarSection>
+      <SidebarSectionHeading title="Best of youtube" />
       <ul>
         <SidebarNavItem
           v-for="listItem in listItemsBest"
@@ -75,22 +75,10 @@ const listItemsMore = reactive([
           :icon="listItem.icon"
           :is-active="listItem.isActive"
         />
-        <!--<li>
-          <a class="flex items-center px-6 py-2 text-sm hover:bg-gray-100" href="#">
-            <div class="rounded-full mr-6 p-1 bg-gray-700">
-              <svg
-                class="h-4 w-4 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              ></svg>
-            </div>
-            <span>360&deg; Video</span>
-          </a>
-        </li>-->
       </ul>
-    </section>
-    <section class="py-2 border-b">
+    </SidebarSection>
+
+    <SidebarSection>
       <ul>
         <SidebarNavItem
           :label="listItemsMore[0].label"
@@ -98,8 +86,9 @@ const listItemsMore = reactive([
           :is-active="listItemsMore[0].isActive"
         />
       </ul>
-    </section>
-    <section class="py-2 border-b">
+    </SidebarSection>
+
+    <SidebarSection>
       <SidebarSectionHeading title="More from youtube" />
       <ul>
         <SidebarNavItem
@@ -110,8 +99,9 @@ const listItemsMore = reactive([
           :is-active="listItem.isActive"
         />
       </ul>
-    </section>
-    <section class="py-2 border-b">
+    </SidebarSection>
+
+    <SidebarSection>
       <ul>
         <SidebarNavItem
           v-for="listItem in listItemsMore.slice(3)"
@@ -121,8 +111,9 @@ const listItemsMore = reactive([
           :is-active="listItem.isActive"
         />
       </ul>
-    </section>
-    <section class="px-6 py-4 text-xs font-semibold space-y-4">
+    </SidebarSection>
+
+    <SidebarSection class="px-6 py-4 text-xs font-semibold space-y-4">
       <div>
         <a class="mr-2" href="#">About</a>
         <a class="mr-2" href="#">Press</a>
@@ -140,6 +131,6 @@ const listItemsMore = reactive([
         <a class="mr-2" href="#">Test new features</a>
       </div>
       <div class="font-normal text-gray-500">&copy; 2021 Google LLC</div>
-    </section>
+    </SidebarSection>
   </aside>
 </template>
