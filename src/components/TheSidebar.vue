@@ -2,6 +2,7 @@
 import { reactive } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import SidebarNavItem from './SidebarNavItem.vue'
+import ButtonLogin from './ButtonLogin.vue'
 
 const listItems = reactive([
   { label: 'Home', icon: 'home', isActive: true },
@@ -56,8 +57,12 @@ const listItemsMore = reactive([
     </section>
     <section class="px-8 py-4 border-b font-medium leading-5">
       <span class="text-sm">Sign in to like videos, comment, and subscribe.</span>
+
+      <ButtonLogin  />
+
       <button
-        class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700 uppercase border border-blue-700 rounded-sm focus:outline-none"
+        class="flex items-center px-2 py-0.5 mt-3 text-sm text-blue-700
+        uppercase border border-blue-700 rounded-sm focus:outline-none"
       >
         <BaseIcon name="user" class="h-7 w-7 mr-2" />
         Sign in

@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 
 defineProps({

@@ -1,8 +1,8 @@
 <script setup>
 import VideoItemThumbnail from './VideoItemThumbnail.vue'
 import VideoItemInfo from './VideoItemInfo.vue'
-import { defineProps } from 'vue'
 
+// eslint-disable-next-line no-undef
 defineProps({
   index: {
     type: Number,

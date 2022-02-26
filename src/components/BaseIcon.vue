@@ -1,6 +1,5 @@
 <script setup>
 import icons from '../icons.js'
-import { defineProps } from 'vue'
 
 const props = defineProps({
   name: {

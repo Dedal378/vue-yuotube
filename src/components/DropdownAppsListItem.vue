@@ -1,6 +1,5 @@
 <script setup>
 import BaseIcon from './BaseIcon.vue'
-import { defineProps } from 'vue'
 
 const props = defineProps({
   label: {

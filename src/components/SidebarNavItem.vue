@@ -1,5 +1,5 @@
 <script setup>
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 
 const props = defineProps({
