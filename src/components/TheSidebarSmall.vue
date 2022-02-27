@@ -1,8 +1,27 @@
-<script setup></script>
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    required: true,
+  },
+})
+const classes = computed(() => [
+  props.isOpen ? 'md:block' : 'hidden',
+  'min-h-screen',
+  'overflow-auto',
+  'fixed',
+  'z-20',
+  'top-0',
+  'pt-14',
+  'bg-white',
+])
+</script>
 
 <template>
-  <aside class="min-h-screen hidden md:block xl:hidden fixed z-20 top-0 overflow-auto pt-14 bg-white">
-    <section class="">
+  <aside :class="classes">
+    <section>
       <ul>
         <li>
           <a class="flex flex-col items-center px-2 py-5 text-red-500 hover:border-gray-100" href="#">

@@ -1,7 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import CategoryItem from './CategoryItem.vue'
 
+const props = defineProps({
+  isSidebarOpen: {
+    type: Boolean,
+  },
+})
 const categories = ref([
   'All',
   'Trucks',
@@ -25,10 +30,19 @@ const categories = ref([
   'Math',
   'Programming',
 ])
+const classes = computed(() => [
+  props.isSidebarOpen ? 'xl:pl-64' : 'md:pl-24',
+  'pt-14',
+  'w-full',
+  'fixed',
+  'bg-white',
+  'bg-opacity-95',
+  'z-10',
+])
 </script>
 
 <template>
-  <section class="pt-14 md:pl-24 xl:pl-64 w-full fixed z-10 bg-white bg-opacity-95">
+  <section :class="classes">
     <div class="border-t border-b px-4 max-w-screen-2xl m-auto">
       <div class="py-3 flex space-x-3 overflow-auto text-sm whitespace-nowrap">
         <CategoryItem

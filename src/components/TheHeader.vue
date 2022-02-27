@@ -7,7 +7,7 @@ import ButtonLogin from './ButtonLogin.vue'
 import BaseIcon from './BaseIcon.vue'
 
 defineEmits({
-  openMobileSidebar: null,
+  toggleSidebar: null,
 })
 </script>
 
@@ -16,7 +16,7 @@ defineEmits({
     <!--left-->
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
-        <button @click="$emit('openMobileSidebar')" class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
+        <button @click="$emit('toggleSidebar')" class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
           <BaseIcon name="menu" />
         </button>
 
