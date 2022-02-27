@@ -1,11 +1,26 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, toRefs, watch, nextTick } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import LogoMain from './LogoMain.vue'
 import SidebarContent from './SidebarContent.vue'
 import TheSidebarMobileOverlay from './TheSidebarMobileOverlay.vue'
 
-const isOpen = ref(true)
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    required: true,
+  },
+})
+defineEmits({
+  close: null,
+})
+
+const mobileSidebar = ref()
+const { isOpen } = toRefs(props)
+
+watch(isOpen, () => {
+  nextTick(() => isOpen && mobileSidebar.value.focus()) //выражение выполнится, если isOpen не null и не undefined
+})
 </script>
 
 <template>
@@ -17,20 +32,26 @@ const isOpen = ref(true)
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
-    <TheSidebarMobileOverlay @click="isOpen = false" v-show="isOpen" />
+    <TheSidebarMobileOverlay @click="$emit('close')" v-show="isOpen" />
   </transition>
 
   <transition
-    enter-active-class="transition ease-in-out duration-200 transform"
+    enter-active-class="transition transform ease-in-out duration-200"
     enter-from-class="-translate-x-full"
     enter-to-class="translate-x-0"
-    leave-active-class="transition ease-in-out duration-200 transform"
+    leave-active-class="transition transform ease-in-out duration-200"
     leave-from-class="translate-x-0"
     leave-to-class="-translate-x-full"
   >
-    <aside v-show="isOpen" class="fixed z-40 w-64 max-h-screen overflow-auto bg-white">
+    <aside
+      v-show="isOpen"
+      @keydown.esc="$emit('close')"
+      tabindex="-1"
+      ref="mobileSidebar"
+      class="fixed z-40 w-64 max-h-screen overflow-auto bg-white outline-none"
+    >
       <section class="flex items-center p-4 border-b sticky top-0 bg-white">
-        <button @click="isOpen = false" class="ml-2 mr-6 focus:outline-none">
+        <button @click="$emit('close')" class="ml-2 mr-6 focus:outline-none">
           <BaseIcon name="menu" />
         </button>
         <LogoMain />

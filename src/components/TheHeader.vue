@@ -5,6 +5,10 @@ import LogoMain from './LogoMain.vue'
 import TheSearch from './TheSearch.vue'
 import ButtonLogin from './ButtonLogin.vue'
 import BaseIcon from './BaseIcon.vue'
+
+defineEmits({
+  openMobileSidebar: null,
+})
 </script>
 
 <template>
@@ -12,7 +16,7 @@ import BaseIcon from './BaseIcon.vue'
     <!--left-->
     <div class="lg:w-1/4 flex">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
-        <button class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
+        <button @click="$emit('openMobileSidebar')" class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
           <BaseIcon name="menu" />
         </button>
 
