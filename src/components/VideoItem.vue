@@ -2,7 +2,6 @@
 import VideoItemThumbnail from './VideoItemThumbnail.vue'
 import VideoItemInfo from './VideoItemInfo.vue'
 
-// eslint-disable-next-line no-undef
 defineProps({
   index: {
     type: Number,

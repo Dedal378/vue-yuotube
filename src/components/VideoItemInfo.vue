@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 
-// eslint-disable-next-line no-undef
 const props = defineProps({
   index: {
     type: String,
