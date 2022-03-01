@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 import TheHeader from './components/TheHeader.vue'
 import TheSidebar from './components/TheSidebar.vue'
 import TheCategories from './components/TheCategories.vue'
-import TheSidebarCompact from './components/TheSidebarSmall.vue'
+import TheSidebarCompact from './components/TheSidebarCompact.vue'
 import TheSidebarMobile from './components/TheSidebarMobile.vue'
 import TheVideos from './components/TheVideos.vue'
 
