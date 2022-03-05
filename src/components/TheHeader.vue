@@ -1,6 +1,6 @@
 <script setup>
 import TheDropdownApps from './TheDropdownApps.vue'
-// import TheDropdownSettings from './TheDropdownSettings.vue'
+import TheDropdownSettings from './TheDropdownSettings.vue'
 import LogoMain from './LogoMain.vue'
 import TheSearch from './TheSearch.vue'
 import ButtonLogin from './ButtonLogin.vue'
@@ -49,11 +49,7 @@ defineEmits({
       <TheDropdownApps />
 
       <!--pop-up btn list 2-->
-      <button class="relative group p-2 focus:outline-none">
-        <BaseIcon name="dotsVertical" class="h-5 w-5" />
-        <!--TODO: переделать, второй список-->
-        <!--<TheDropdownSettings />-->
-      </button>
+      <TheDropdownSettings />
 
       <ButtonLogin />
     </div>
