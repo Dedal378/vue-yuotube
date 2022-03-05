@@ -47,10 +47,10 @@ watch(isOpen, () => {
       leave-to-class="transform opacity-0 scale-55"
     >
       <div
-        @keydown.esc="isOpen = false"
-        tabindex="-1"
-        ref="dropDownSettings"
         v-show="isOpen"
+        @keydown.esc="isOpen = false"
+        ref="dropDownSettings"
+        tabindex="-1"
         class="absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0"
       >
         <section class="py-2 border-b">
