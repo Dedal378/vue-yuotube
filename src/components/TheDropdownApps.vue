@@ -39,7 +39,9 @@ watch(isOpen, () => {
         @keydown.esc="isOpen = false"
         tabindex="-1"
         ref="dropDownApps"
-        v-show="isOpen" class="absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0">
+        v-show="isOpen"
+        class="absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0"
+      >
         <section class="py-2 border-b">
           <ul>
             <DropdownAppsListItem label="YouTube TV" />
