@@ -11,12 +11,13 @@ const props = defineProps({
     required: true,
   },
 })
-defineEmits({
-  close: null,
-})
 
 const mobileSidebar = ref()
 const { isOpen } = toRefs(props)
+
+defineEmits({
+  close: null,
+})
 
 watch(isOpen, () => {
   nextTick(() => isOpen && mobileSidebar.value.focus()) //выражение выполнится, если isOpen не null и не undefined
