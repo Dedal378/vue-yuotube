@@ -2,6 +2,7 @@
 import { nextTick, onMounted, reactive, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
+import BaseTooltip from './BaseTooltip.vue'
 
 const isOpen = ref(false)
 const dropDownSettingsButton = ref(null)
@@ -34,14 +35,16 @@ watch(isOpen, () => {
 
 <template>
   <div class="relative">
-    <button
-      @click="isOpen = !isOpen"
-      @keydown.esc="isOpen = false"
-      ref="dropDownSettingsButton"
-      class="relative p-2 focus:outline-none"
-    >
-      <BaseIcon name="dotsVertical" class="h-5 w-5" />
-    </button>
+    <BaseTooltip text="Settings">
+      <button
+        @click="isOpen = !isOpen"
+        @keydown.esc="isOpen = false"
+        ref="dropDownSettingsButton"
+        class="relative p-2 focus:outline-none"
+      >
+        <BaseIcon name="dotsVertical" class="h-5 w-5" />
+      </button>
+    </BaseTooltip>
 
     <transition
       enter-active-class="transition ease-out duration-100"

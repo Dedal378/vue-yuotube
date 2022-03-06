@@ -5,6 +5,7 @@ import LogoMain from './LogoMain.vue'
 import TheSearch from './TheSearch.vue'
 import ButtonLogin from './ButtonLogin.vue'
 import BaseIcon from './BaseIcon.vue'
+import BaseTooltip from './BaseTooltip.vue'
 
 defineEmits({
   toggleSidebar: null,
@@ -30,20 +31,28 @@ defineEmits({
     >
       <TheSearch />
 
-      <button class="ml-4 focus:outline-none">
-        <BaseIcon name="microphone" class="h-5 w-5" />
-      </button>
+      <BaseTooltip text="Search with your voice">
+        <button class="py-2 focus:outline-none">
+          <BaseIcon name="microphone" class="h-5 w-5" />
+        </button>
+      </BaseTooltip>
     </div>
 
     <!--right-->
     <div class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4">
-      <button class="sm:hidden p-2 focus:outline-none">
-        <BaseIcon name="search" class="h-5 w-5" />
-      </button>
+      <!--hidden on xl  icon search-->
+      <BaseTooltip text="Search">
+        <button class="sm:hidden p-2 focus:outline-none">
+          <BaseIcon name="search" class="h-5 w-5" />
+        </button>
+      </BaseTooltip>
 
-      <button class="sm:hidden p-2 focus:outline-none">
-        <BaseIcon name="microphone" class="h-5 w-5" />
-      </button>
+      <!--hidden on xl icon microphone-->
+      <BaseTooltip text="Search with your voice">
+        <button class="sm:hidden p-2 focus:outline-none">
+          <BaseIcon name="microphone" class="h-5 w-5" />
+        </button>
+      </BaseTooltip>
 
       <!--pop-up btn list 1-->
       <TheDropdownApps />

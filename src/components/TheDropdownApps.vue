@@ -2,6 +2,7 @@
 import { nextTick, onMounted, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownAppsListItem from './DropdownAppsListItem.vue'
+import BaseTooltip from './BaseTooltip.vue'
 
 const isOpen = ref(false)
 const dropDownAppsButton = ref(null)
@@ -23,9 +24,11 @@ watch(isOpen, () => {
 
 <template>
   <div class="relative">
-    <button @click="isOpen = !isOpen" ref="dropDownAppsButton" class="relative p-2 focus:outline-none">
-      <BaseIcon name="viewGrid" class="h-5 w-5" />
-    </button>
+    <BaseTooltip text="YouTube apps">
+      <button @click="isOpen = !isOpen" ref="dropDownAppsButton" class="relative p-2 focus:outline-none">
+        <BaseIcon name="viewGrid" class="h-5 w-5" />
+      </button>
+    </BaseTooltip>
 
     <transition
       enter-active-class="transition ease-out duration-100"
