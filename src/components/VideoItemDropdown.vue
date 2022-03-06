@@ -10,22 +10,21 @@ const positionClasses = ref([])
 
 const buttonClasses = computed(() => {
   return [
-    '-mt-1',
-    'ml-auto',
     'p-1',
-    'opacity-0',
-    'group-hover:opacity-100',
     'text-gray-500',
     'hover:text-gray-700',
     'focus:outline-none',
+    'group-hover:opacity-100',
+    isOpen.value ? 'opacity-100' : 'opacity-0',
   ]
 })
 const dropdownClasses = computed(() => {
   return [
+    'z-30',
     'absolute',
     // 'top-9',
-    '-right-full',
-    'sm:right-0',
+    // '-right-full',
+    // 'sm:right-0',
     'bg-white',
     'w-48',
     'rounded',
@@ -45,7 +44,7 @@ const toggle = (event) => {
   }
 }
 const getPositionClasses = (event) => {
-  return [getTopClass(event), getRightClass(), getLeftClass()]
+  return [getTopClass(event), getBottomClass(event), getRightClass(event), getLeftClass(event)]
 }
 const getTopClass = (event) => {
   const clickCoordY = event.clientY
@@ -53,16 +52,62 @@ const getTopClass = (event) => {
   const dropdownHeight = videoItemDropdown.value.offsetHeight
 
   if (window.innerHeight - clickCoordY < dropdownHeight) {
-    return '-top-14'
+    return 'top-auto'
   }
   if (window.innerHeight - clickCoordY < dropdownHeight + buttonHeight) {
     return 'top-0'
   }
 
-  return 'top-9'
+  return 'top-8'
 }
-const getRightClass = () => {}
-const getLeftClass = () => {}
+const getBottomClass = (event) => {
+  const clickCoordY = event.clientY
+  const dropdownHeight = videoItemDropdown.value.offsetHeight
+
+  if (window.innerHeight - clickCoordY < dropdownHeight) {
+    return 'bottom-9'
+  }
+
+  return 'bottom-auto'
+}
+const getRightClass = (event) => {
+  const clickCoordX = event.clientX
+  const clickCoordY = event.clientY
+  const buttonHeight = event.currentTarget.offsetHeight
+  const dropdownWidth = videoItemDropdown.value.offsetWidth
+  const dropdownHeight = videoItemDropdown.value.offsetHeight
+
+  if (window.innerWidth - clickCoordX > dropdownWidth) {
+    return 'right-auto'
+  }
+  if (window.innerHeight - clickCoordY > dropdownHeight + buttonHeight) {
+    return 'right-0'
+  }
+  if (window.innerHeight - clickCoordY > dropdownHeight) {
+    return 'right-8'
+  }
+
+  return 'right-0'
+}
+const getLeftClass = (event) => {
+  const clickCoordX = event.clientX
+  const clickCoordY = event.clientY
+  const buttonHeight = event.currentTarget.offsetHeight
+  const dropdownWidth = videoItemDropdown.value.offsetWidth
+  const dropdownHeight = videoItemDropdown.value.offsetHeight
+
+  if (window.innerWidth - clickCoordX < dropdownWidth) {
+    return 'left-auto'
+  }
+  if (window.innerHeight - clickCoordY < dropdownHeight) {
+    return 'left-auto'
+  }
+  if (window.innerHeight - clickCoordY > dropdownHeight + buttonHeight) {
+    return 'left-auto'
+  }
+
+  return 'left-8'
+}
 
 onMounted(() => {
   window.addEventListener('click', (ev) => {
@@ -71,8 +116,14 @@ onMounted(() => {
     }
   })
 })
+onMounted(() => {
+  // при скролле список автоматически будет закрываться
+  // window.addEventListener('scroll', () => (isOpen.value = false))
+})
 
 watch(isOpen, () => {
+  // блокировка скролла при открытом списке
+  // document.body.classList.toggle('overflow-hidden')
   nextTick(() => isOpen.value && videoItemDropdown.value.focus())
 })
 </script>
@@ -91,9 +142,13 @@ watch(isOpen, () => {
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-55"
     >
-      <div v-show="isOpen" @keydown.esc="isOpen = false" ref="videoItemDropdown" tabindex="-1" :class="dropdownClasses">
+      <div v-show="isOpen" @keydown.esc="isOpen = false" :class="dropdownClasses" ref="videoItemDropdown" tabindex="-1">
         <section class="py-2">
           <ul>
+            <VideoItemDropdownListItem label="Add to queue" icon="menuVideo" />
+            <VideoItemDropdownListItem label="Add to queue" icon="menuVideo" />
+            <VideoItemDropdownListItem label="Add to queue" icon="menuVideo" />
+            <VideoItemDropdownListItem label="Add to queue" icon="menuVideo" />
             <VideoItemDropdownListItem label="Add to queue" icon="menuVideo" />
           </ul>
         </section>
