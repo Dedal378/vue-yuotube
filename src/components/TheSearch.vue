@@ -6,7 +6,6 @@ import TheSearchButton from './TheSearchButton.vue'
 <template>
   <div class="flex w-full h-full">
     <TheSearchInput />
-
     <TheSearchButton />
   </div>
 </template>
