@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, watch, nextTick } from 'vue'
+import { nextTick, onMounted, reactive, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
@@ -34,7 +34,12 @@ watch(isOpen, () => {
 
 <template>
   <div class="relative">
-    <button @click="isOpen = !isOpen" ref="dropDownSettingsButton" class="relative p-2 focus:outline-none">
+    <button
+      @click="isOpen = !isOpen"
+      @keydown.esc="isOpen = false"
+      ref="dropDownSettingsButton"
+      class="relative p-2 focus:outline-none"
+    >
       <BaseIcon name="dotsVertical" class="h-5 w-5" />
     </button>
 
@@ -51,7 +56,7 @@ watch(isOpen, () => {
         @keydown.esc="isOpen = false"
         ref="dropDownSettings"
         tabindex="-1"
-        class="absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0"
+        class="absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0 focus:outline-none"
       >
         <section class="py-2 border-b">
           <ul>

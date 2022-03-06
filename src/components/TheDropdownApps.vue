@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watch, nextTick } from 'vue'
+import { nextTick, onMounted, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownAppsListItem from './DropdownAppsListItem.vue'
 
@@ -40,7 +40,7 @@ watch(isOpen, () => {
         @keydown.esc="isOpen = false"
         ref="dropDownApps"
         tabindex="-1"
-        class="absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0"
+        class="absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0 focus:outline-none"
       >
         <section class="py-2 border-b">
           <ul>
