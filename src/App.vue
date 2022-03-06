@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import TheHeader from './components/TheHeader.vue'
 import TheSidebar from './components/TheSidebar.vue'
 import TheCategories from './components/TheCategories.vue'
@@ -33,6 +33,7 @@ const onResize = () => {
   } else {
     isCompactSidebarOpen.value = isCompactSidebarActive.value
     isSidebarOpen.value = !isCompactSidebarActive.value
+    isMobileSidebarOpen.value = false
   }
 }
 
@@ -55,7 +56,7 @@ onMounted(() => {
   <TheHeader @toggle-sidebar="toggleSidebar" />
   <TheSidebarCompact v-if="isCompactSidebarOpen" />
   <TheSidebar v-if="isSidebarOpen" />
-  <TheSidebarMobile :is-open="isMobileSidebarOpen" @close="closeMobileSidebar" />
+  <TheSidebarMobile @close="closeMobileSidebar" :is-open="isMobileSidebarOpen" />
   <TheCategories :is-sidebar-open="isSidebarOpen" />
   <TheVideos :is-sidebar-open="isSidebarOpen" />
 </template>
