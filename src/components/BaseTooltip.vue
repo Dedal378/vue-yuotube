@@ -1,10 +1,14 @@
 <script setup>
 import { computed, ref } from 'vue'
 
-defineProps({
+const props = defineProps({
   text: {
     type: String,
     required: true,
+  },
+  top: {
+    type: Boolean,
+    required: false,
   },
 })
 const isShown = ref(false)
@@ -19,20 +23,22 @@ const classes = computed(() => {
     'whitespace-nowrap',
     'p-2',
     'absolute',
-    'top-14',
     'left-1/2',
     'transform',
     '-translate-x-1/2',
+    props.top ? 'bottom-12' : 'top-14',
   ]
 })
-const toggle = () => {
-  isShown.value = !isShown.value
-}
 </script>
 
 <template>
   <div class="relative">
-    <div @mouseenter="toggle" @mouseleave="toggle" class="h-full">
+    <div
+      @mouseenter="isShown = true"
+      @mouseleave="isShown = false"
+      @click="isShown = false"
+      class="flex items-center h-full"
+    >
       <slot />
     </div>
     <transition

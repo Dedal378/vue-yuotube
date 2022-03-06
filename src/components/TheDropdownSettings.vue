@@ -4,10 +4,10 @@ import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 import BaseTooltip from './BaseTooltip.vue'
 
-const isOpen = ref(false)
 const dropDownSettingsButton = ref(null)
 const dropDownSettings = ref(null)
 
+const isOpen = ref(false)
 const listItems = reactive([
   { label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
   { label: 'Language: English', icon: 'language', withSubMenu: true },
@@ -18,6 +18,17 @@ const listItems = reactive([
   { label: 'Send feedback', icon: 'feedback', withSubMenu: false },
   { label: 'Keyboard shortcuts', icon: 'shortcut', withSubMenu: false },
   { label: 'Restricted mode: Off', icon: null, withSubMenu: true },
+])
+const dropdownClasses = reactive([
+  'absolute',
+  'top-9',
+  '-right-full',
+  'sm:right-0',
+  'bg-white',
+  'w-72',
+  'border',
+  'border-t-0',
+  'focus:outline-none',
 ])
 
 onMounted(() => {
@@ -54,13 +65,7 @@ watch(isOpen, () => {
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-55"
     >
-      <div
-        v-show="isOpen"
-        @keydown.esc="isOpen = false"
-        ref="dropDownSettings"
-        tabindex="-1"
-        class="absolute top-9 -right-full sm:right-0 bg-white w-72 border border-t-0 focus:outline-none"
-      >
+      <div v-show="isOpen" @keydown.esc="isOpen = false" ref="dropDownSettings" tabindex="-1" :class="dropdownClasses">
         <section class="py-2 border-b">
           <ul>
             <DropdownSettingsListItem

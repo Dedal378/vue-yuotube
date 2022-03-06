@@ -1,12 +1,25 @@
 <script setup>
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { nextTick, onMounted, reactive, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownAppsListItem from './DropdownAppsListItem.vue'
 import BaseTooltip from './BaseTooltip.vue'
 
-const isOpen = ref(false)
 const dropDownAppsButton = ref(null)
 const dropDownApps = ref(null)
+
+const isOpen = ref(false)
+const dropdownClasses = reactive([
+  'z-10',
+  'absolute',
+  'right-0',
+  'sm:left-0',
+  'top-9',
+  'bg-white',
+  'w-60',
+  'border',
+  'border-t-0',
+  'focus:outline-none',
+])
 
 onMounted(() => {
   // обработка click вне элемента
@@ -38,13 +51,7 @@ watch(isOpen, () => {
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-55"
     >
-      <div
-        v-show="isOpen"
-        @keydown.esc="isOpen = false"
-        ref="dropDownApps"
-        tabindex="-1"
-        class="absolute right-0 sm:left-0 top-9 bg-white w-60 border border-t-0 focus:outline-none"
-      >
+      <div v-show="isOpen" @keydown.esc="isOpen = false" ref="dropDownApps" tabindex="-1" :class="dropdownClasses">
         <section class="py-2 border-b">
           <ul>
             <DropdownAppsListItem label="YouTube TV" />
