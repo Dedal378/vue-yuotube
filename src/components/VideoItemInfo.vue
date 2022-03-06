@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import BaseIcon from './BaseIcon.vue'
+import VideoItemDropdown from './VideoItemDropdown.vue'
 
 const props = defineProps({
   index: {
@@ -31,10 +32,6 @@ const summary = computed(() => {
       <div v-html="summary"></div>
     </div>
 
-    <button
-      class="ml-auto p-0.5 -mt-1 opacity-0 group-hover:opacity-100 text-gray-500 hover:text-gray-700 focus:outline-none"
-    >
-      <BaseIcon name="dotsVertical" class="h-5 w-5" />
-    </button>
+    <VideoItemDropdown />
   </div>
 </template>
