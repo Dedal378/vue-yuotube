@@ -38,16 +38,7 @@ const onResize = () => {
 }
 
 onMounted(() => {
-  if (window.innerWidth >= 768 && window.innerWidth < 1280) {
-    isCompactSidebarActive.value = true
-  }
-
-  if (window.innerWidth >= 1280) {
-    isCompactSidebarActive.value = false
-  }
-
   onResize()
-
   window.addEventListener('resize', onResize)
 })
 </script>
