@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { reactive, ref } from 'vue'
 
 const props = defineProps({
   text: {
@@ -10,25 +10,42 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  right: {
+    type: Boolean,
+    required: false,
+  },
+  left: {
+    type: Boolean,
+    required: false,
+  },
 })
 const isShown = ref(false)
 
-const classes = computed(() => {
-  return [
-    'bg-gray-600',
-    'bg-opacity-80',
-    'rounded-sm',
-    'text-white',
-    'text-xs',
-    'whitespace-nowrap',
-    'p-2',
-    'absolute',
-    'left-1/2',
-    'transform',
-    '-translate-x-1/2',
-    props.top ? 'bottom-12' : 'top-14',
-  ]
-})
+const getPositionClasses = () => {
+  const topClass = props.top ? 'bottom-12' : 'top-14'
+
+  if (props.right) {
+    return [topClass, 'left-0']
+  }
+  if (props.left) {
+    return [topClass, 'right-0']
+  }
+
+  return [topClass, 'left-1/2', '-translate-x-1/2']
+}
+
+const classes = reactive([
+  'bg-gray-600',
+  'bg-opacity-80',
+  'rounded-sm',
+  'text-white',
+  'text-xs',
+  'whitespace-nowrap',
+  'p-2',
+  'absolute',
+  'transform',
+  ...getPositionClasses(),
+])
 </script>
 
 <template>

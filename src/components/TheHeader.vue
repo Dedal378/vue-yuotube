@@ -1,14 +1,34 @@
 <script setup>
+import { computed, onMounted, ref } from 'vue'
 import TheDropdownApps from './TheDropdownApps.vue'
 import TheDropdownSettings from './TheDropdownSettings.vue'
 import LogoMain from './LogoMain.vue'
 import TheSearch from './TheSearch.vue'
-import ButtonLogin from './ButtonLogin.vue'
 import BaseIcon from './BaseIcon.vue'
 import BaseTooltip from './BaseTooltip.vue'
+import ButtonLogin from './ButtonLogin.vue'
+import TheSearchMobile from './TheSearchMobile.vue'
 
-defineEmits({
-  toggleSidebar: null,
+const isSmallScreen = ref(false)
+const isMobileSearchActive = ref(false)
+
+defineEmits({ toggleSidebar: null })
+
+const closeMobileSearch = () => (isMobileSearchActive.value = false)
+const onResize = () => {
+  if (window.innerWidth < 640) {
+    isSmallScreen.value = true
+    return
+  }
+  closeMobileSearch()
+  isSmallScreen.value = false
+}
+
+const isMobileSearchShown = computed(() => (isSmallScreen.value && isMobileSearchActive.value))
+
+onMounted(() => {
+  onResize()
+  window.addEventListener('resize', onResize)
 })
 </script>
 
@@ -25,8 +45,10 @@ defineEmits({
       </div>
     </div>
 
+    <TheSearchMobile v-if="isMobileSearchShown" @close="closeMobileSearch" />
     <!--center-->
     <div
+      v-else
       class="hidden sm:flex flex-1 items-center justify-end p-2.5 pl-8 md:pl-12 md:px-8 lg:px-0 lg:w-1/2 max-w-screen-md"
     >
       <TheSearch />
@@ -41,7 +63,7 @@ defineEmits({
     <!--right-->
     <div class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4">
       <!--hidden on xl  icon search-->
-      <BaseTooltip text="Search">
+      <BaseTooltip @click.stop="isMobileSearchActive = true" text="Search">
         <button class="sm:hidden p-2 focus:outline-none">
           <BaseIcon name="search" class="h-5 w-5" />
         </button>
