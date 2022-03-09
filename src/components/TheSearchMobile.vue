@@ -22,7 +22,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div ref="rootEl" class="absolute w-full p-2 z-10 flex">
+  <div ref="rootEl" class="absolute w-full p-2 z-10 flex bg-white">
     <BaseTooltip text="Back" right>
       <button @click="$emit('close')" class="mr-2 p-2 focus:outline-none">
         <BaseIcon name="arrowLeft" class="h-5 w-5" />
