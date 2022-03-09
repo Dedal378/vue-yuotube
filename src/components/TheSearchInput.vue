@@ -1,7 +1,18 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 
-const searchInput = ref()
+const searchInput = ref(null)
+const classes = [
+  'px-3',
+  'w-full',
+  'border',
+  'border-gray-300',
+  'shadow-inner',
+  'rounded-bl-sm',
+  'rounded-tl-sm',
+  'focus:border-blue-700',
+  'focus:outline-none',
+]
 
 onMounted(() => {
   if (window.innerWidth < 640) {
@@ -11,10 +22,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <input
-    ref="searchInput"
-    class="px-3 w-full border border-gray-300 shadow-inner rounded-bl-sm rounded-tl-sm focus:border-blue-700 focus:outline-none"
-    placeholder="Search"
-    type="text"
-  />
+  <input ref="searchInput" :class="classes" placeholder="Search" type="text" />
 </template>

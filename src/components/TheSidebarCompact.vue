@@ -2,8 +2,6 @@
 import { computed, reactive } from 'vue'
 import SidebarCompactNavItem from './SidebarCompactNavItem.vue'
 
-const classes = computed(() => ['min-h-screen', 'overflow-auto', 'fixed', 'z-20', 'top-0', 'pt-14', 'bg-white'])
-
 const navItems = reactive([
   { label: 'Home', icon: 'home', isActive: true },
   { label: 'Trending', icon: 'trending', isActive: false },
@@ -11,6 +9,7 @@ const navItems = reactive([
   { label: 'Library', icon: 'library', isActive: false },
   { label: 'History', icon: 'history', isActive: false },
 ])
+const classes = computed(() => ['min-h-screen', 'overflow-auto', 'fixed', 'z-20', 'top-0', 'pt-14', 'bg-white'])
 </script>
 
 <template>

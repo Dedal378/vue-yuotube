@@ -17,9 +17,7 @@ const props = defineProps({
     default: 'top-0',
   },
 })
-
 const isBadgeShown = ref(false)
-
 const classes = computed(() => {
   return [
     'absolute',

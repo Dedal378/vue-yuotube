@@ -6,7 +6,6 @@ const props = defineProps({
     type: String,
   },
 })
-
 const path = icons[props.name]
 </script>
 

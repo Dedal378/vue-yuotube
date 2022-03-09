@@ -44,10 +44,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <TheHeader @toggle-sidebar="toggleSidebar" />
+  <div class="fixed w-full z-30">
+    <TheHeader @toggle-sidebar="toggleSidebar" />
+    <TheCategories :is-sidebar-open="isSidebarOpen" />
+  </div>
   <TheSidebarCompact v-if="isCompactSidebarOpen" />
   <TheSidebar v-if="isSidebarOpen" />
   <TheSidebarMobile @close="closeMobileSidebar" :is-open="isMobileSidebarOpen" />
-  <TheCategories :is-sidebar-open="isSidebarOpen" />
   <TheVideos :is-sidebar-open="isSidebarOpen" />
 </template>

@@ -20,7 +20,6 @@ const props = defineProps({
   },
 })
 const isShown = ref(false)
-
 const getPositionClasses = () => {
   const topClass = props.top ? 'bottom-12' : 'top-14'
 
@@ -33,7 +32,6 @@ const getPositionClasses = () => {
 
   return [topClass, 'left-1/2', '-translate-x-1/2']
 }
-
 const classes = reactive([
   'bg-gray-600',
   'bg-opacity-80',

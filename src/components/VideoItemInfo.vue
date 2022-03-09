@@ -11,10 +11,8 @@ const props = defineProps({
   },
 })
 const channelName = ref(`Channel name ${props.index}`)
-
 const summary = computed(() => {
   const days = props.index === 1 ? 'day' : 'days'
-
   return `${props.index}k views &middot; ${props.index} ${days} ago`
 })
 </script>

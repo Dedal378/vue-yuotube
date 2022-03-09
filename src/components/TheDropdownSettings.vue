@@ -6,7 +6,6 @@ import BaseTooltip from './BaseTooltip.vue'
 
 const dropDownSettingsButton = ref(null)
 const dropDownSettings = ref(null)
-
 const isOpen = ref(false)
 const listItems = reactive([
   { label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
@@ -31,16 +30,15 @@ const dropdownClasses = reactive([
   'focus:outline-none',
 ])
 
+watch(isOpen, () => {
+  nextTick(() => isOpen.value && dropDownSettings.value.focus())
+})
 onMounted(() => {
   window.addEventListener('click', (ev) => {
     if (!dropDownSettingsButton.value.contains(ev.target)) {
       isOpen.value = false
     }
   })
-})
-
-watch(isOpen, () => {
-  nextTick(() => isOpen.value && dropDownSettings.value.focus())
 })
 </script>
 

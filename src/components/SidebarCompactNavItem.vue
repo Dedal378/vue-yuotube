@@ -14,12 +14,10 @@ const props = defineProps({
     type: Boolean,
   },
 })
-
 const classes = computed(() => {
   const classes = ['flex', 'flex-col', 'items-center', 'px-2', 'py-5', 'text-sm', 'hover:bg-gray-100']
   return props.isActive ? [...classes, 'text-red-500'] : [...classes]
 })
-
 const iconClasses = computed(() => (props.isActive ? 'h-6 w-6 mb-1.5 text-red-500' : 'h-6 w-6 mb-1.5'))
 </script>
 

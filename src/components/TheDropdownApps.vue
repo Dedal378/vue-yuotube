@@ -6,7 +6,6 @@ import BaseTooltip from './BaseTooltip.vue'
 
 const dropDownAppsButton = ref(null)
 const dropDownApps = ref(null)
-
 const isOpen = ref(false)
 const dropdownClasses = reactive([
   'z-10',
@@ -21,6 +20,9 @@ const dropdownClasses = reactive([
   'focus:outline-none',
 ])
 
+watch(isOpen, () => {
+  nextTick(() => isOpen.value && dropDownApps.value.focus()) //выражение выполнится, если isOpen не null и не undefined
+})
 onMounted(() => {
   // обработка click вне элемента
   window.addEventListener('click', (ev) => {
@@ -28,10 +30,6 @@ onMounted(() => {
       isOpen.value = false
     }
   })
-})
-
-watch(isOpen, () => {
-  nextTick(() => isOpen.value && dropDownApps.value.focus()) //выражение выполнится, если isOpen не null и не undefined
 })
 </script>
 

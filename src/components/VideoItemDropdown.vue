@@ -3,11 +3,10 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import VideoItemDropdownListItem from './VideoItemDropdownListItem.vue'
 
-const isOpen = ref(false)
 const videoItemDropdown = ref(null)
 const videoItemDropdownButton = ref(null)
+const isOpen = ref(false)
 const positionClasses = ref([])
-
 const buttonClasses = computed(() => {
   return [
     'p-1',
@@ -109,6 +108,11 @@ const getLeftClass = (event) => {
   return 'left-8'
 }
 
+watch(isOpen, () => {
+  // блокировка скролла при открытом списке
+  // document.body.classList.toggle('overflow-hidden')
+  nextTick(() => isOpen.value && videoItemDropdown.value.focus())
+})
 onMounted(() => {
   window.addEventListener('click', (ev) => {
     if (!videoItemDropdownButton.value.contains(ev.target)) {
@@ -119,12 +123,6 @@ onMounted(() => {
 onMounted(() => {
   // при скролле список автоматически будет закрываться
   // window.addEventListener('scroll', () => (isOpen.value = false))
-})
-
-watch(isOpen, () => {
-  // блокировка скролла при открытом списке
-  // document.body.classList.toggle('overflow-hidden')
-  nextTick(() => isOpen.value && videoItemDropdown.value.focus())
 })
 </script>
 

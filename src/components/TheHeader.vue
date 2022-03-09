@@ -9,10 +9,21 @@ import BaseTooltip from './BaseTooltip.vue'
 import ButtonLogin from './ButtonLogin.vue'
 import TheSearchMobile from './TheSearchMobile.vue'
 
+defineEmits({ toggleSidebar: null })
 const isSmallScreen = ref(false)
 const isMobileSearchActive = ref(false)
-
-defineEmits({ toggleSidebar: null })
+const classes = ['flex', 'justify-between', 'w-full', 'bg-white', 'bg-opacity-95']
+const isMobileSearchShown = computed(() => isSmallScreen.value && isMobileSearchActive.value)
+const classesSignIn = [
+  'flex',
+  'items-center',
+  'justify-end',
+  'lg:w-1/4',
+  'sm:space-x-3',
+  'p-2',
+  'sm:px-4',
+  isMobileSearchShown.value ? 'opacity-0' : 'opacity-100',
+]
 
 const closeMobileSearch = () => (isMobileSearchActive.value = false)
 const onResize = () => {
@@ -24,8 +35,6 @@ const onResize = () => {
   isSmallScreen.value = false
 }
 
-const isMobileSearchShown = computed(() => (isSmallScreen.value && isMobileSearchActive.value))
-
 onMounted(() => {
   onResize()
   window.addEventListener('resize', onResize)
@@ -33,9 +42,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="flex justify-between fixed z-30 w-full">
+  <header :class="classes">
     <!--left-->
-    <div class="lg:w-1/4 flex">
+    <div :class="['lg:w-1/4', 'flex', isMobileSearchShown ? 'opacity-0' : 'opacity-100']">
       <div class="flex items-center xl:w-64 xl:bg-white pl-4">
         <button @click="$emit('toggleSidebar')" class="mr-3 sm:ml-2 sm:mr-6 focus:outline-none">
           <BaseIcon name="menu" />
@@ -61,7 +70,7 @@ onMounted(() => {
     </div>
 
     <!--right-->
-    <div class="flex items-center justify-end lg:w-1/4 sm:space-x-3 p-2 sm:px-4">
+    <div :class="classesSignIn">
       <!--hidden on xl  icon search-->
       <BaseTooltip @click.stop="isMobileSearchActive = true" text="Search">
         <button class="sm:hidden p-2 focus:outline-none">
