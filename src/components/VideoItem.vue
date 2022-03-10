@@ -4,9 +4,8 @@ import VideoItemInfo from './VideoItemInfo.vue'
 
 defineProps({
   index: {
-    type: Number,
+    type: [Number, String],
     requeue: true,
-    default: 1,
   },
 })
 </script>

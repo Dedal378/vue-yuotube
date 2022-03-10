@@ -3,7 +3,7 @@ import VideoItemThumbnailButton from './VideoItemThumbnailButton.vue'
 
 defineProps({
   index: {
-    type: String,
+    type: [Number, String],
     required: true,
   },
 })

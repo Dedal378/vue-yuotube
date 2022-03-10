@@ -1,23 +1,14 @@
 <script setup>
 import { nextTick, onMounted, reactive, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
-import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 import BaseTooltip from './BaseTooltip.vue'
+import TheDropdownSettingsMain from './TheDropdownSettingsMain.vue'
+import TheDropdownSettingsAppearance from './TheDropdownSettingsAppearance.vue'
 
 const dropDownSettingsButton = ref(null)
 const dropDownSettings = ref(null)
 const isOpen = ref(false)
-const listItems = reactive([
-  { label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
-  { label: 'Language: English', icon: 'language', withSubMenu: true },
-  { label: 'Location: United States', icon: 'location', withSubMenu: true },
-  { label: 'Settings', icon: 'settings', withSubMenu: false },
-  { label: 'Your data in YouTube', icon: 'data', withSubMenu: false },
-  { label: 'Help', icon: 'help', withSubMenu: false },
-  { label: 'Send feedback', icon: 'feedback', withSubMenu: false },
-  { label: 'Keyboard shortcuts', icon: 'shortcut', withSubMenu: false },
-  { label: 'Restricted mode: Off', icon: null, withSubMenu: true },
-])
+const selectedMenu = ref('main')
 const dropdownClasses = reactive([
   'absolute',
   'top-9',
@@ -29,6 +20,10 @@ const dropdownClasses = reactive([
   'border-t-0',
   'focus:outline-none',
 ])
+
+const showSelectedMenu = (selMenu) => {
+  selectedMenu.value = selMenu
+}
 
 watch(isOpen, () => {
   nextTick(() => isOpen.value && dropDownSettings.value.focus())
@@ -63,24 +58,9 @@ onMounted(() => {
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-55"
     >
-      <div v-show="isOpen" @keydown.esc="isOpen = false" ref="dropDownSettings" tabindex="-1" :class="dropdownClasses">
-        <section class="py-2 border-b">
-          <ul>
-            <DropdownSettingsListItem
-              v-for="listItem in listItems.slice(0, 8)"
-              :key="listItem.label"
-              :label="listItem.label"
-              :icon="listItem.icon"
-              :with-sub-menu="listItem.withSubMenu"
-            />
-          </ul>
-        </section>
-
-        <section class="py-2">
-          <ul>
-            <DropdownSettingsListItem :label="listItems[8].label" :with-sub-menu="listItems[8].withSubMenu" />
-          </ul>
-        </section>
+      <div v-show="isOpen" @keydown.esc="isOpen = false" :class="dropdownClasses" ref="dropDownSettings" tabindex="-1">
+        <TheDropdownSettingsMain v-if="selectedMenu === 'main'" @select-menu="showSelectedMenu" />
+        <TheDropdownSettingsAppearance v-else-if="selectedMenu === 'appearance'" @select-menu="showSelectedMenu" />
       </div>
     </transition>
   </div>

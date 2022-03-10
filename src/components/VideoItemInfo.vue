@@ -6,7 +6,7 @@ import VideoItemDropdown from './VideoItemDropdown.vue'
 
 const props = defineProps({
   index: {
-    type: String,
+    type: [Number, String],
     required: true,
   },
 })
