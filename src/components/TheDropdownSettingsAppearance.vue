@@ -1,29 +1,18 @@
 <script setup>
 import { ref } from 'vue'
-import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
+import DropdownSettingsHeader from './DropdownSettingsHeader.vue'
 
 defineEmits({ 'select-menu': null })
 const selectedThemeIdx = ref(0)
-const themes = ref([
-  'Appearance',
-  'Use device theme',
-  'Dark theme',
-  'Light theme',
-])
+const themes = ref(['Use device theme', 'Dark theme', 'Light theme'])
 </script>
 
 <template>
-  <section class="flex items-center border-b border-gray-200 text-black">
-    <button class="p-3 focus:outline-none">
-      <BaseIcon
-        @click.stop="$emit('select-menu', 'main')"
-        name="arrowLeft"
-        class="h-5 w-5"
-      />
-    </button>
-    <span>{{ themes[0] }}</span>
-  </section>
+  <DropdownSettingsHeader
+    title="Appearance"
+    @back="$emit('select-menu', 'main')"
+  />
 
   <section class="py-2">
     <div class="p-3 text-xs text-gray-500">
@@ -32,7 +21,7 @@ const themes = ref([
     <ul>
       <DropdownSettingsListItem
         @click.stop="selectedThemeIdx = themeIdx"
-        v-for="(theme, themeIdx) in themes.slice(1, 4)"
+        v-for="(theme, themeIdx) in themes"
         :key="themeIdx"
         :active="themeIdx === selectedThemeIdx"
         :label="theme"
