@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
+defineEmits({ 'select-menu': null })
 const selectedThemeIdx = ref(0)
 const themes = ref([
   'Appearance',
@@ -30,7 +31,7 @@ const themes = ref([
     </div>
     <ul>
       <DropdownSettingsListItem
-        @click="selectedThemeIdx = themeIdx"
+        @click.stop="selectedThemeIdx = themeIdx"
         v-for="(theme, themeIdx) in themes.slice(1, 4)"
         :key="themeIdx"
         :active="themeIdx === selectedThemeIdx"

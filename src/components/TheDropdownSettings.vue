@@ -23,6 +23,17 @@ const dropdownClasses = reactive([
 
 const showSelectedMenu = selMenu => {
   selectedMenu.value = selMenu
+  dropDownSettings.value.focus()
+}
+const close = () => {
+  isOpen.value = false
+  setTimeout(() => (selectedMenu.value = 'main'), 100)
+}
+const open = () => {
+  isOpen.value = true
+}
+const toggle = () => {
+  isOpen.value ? close() : open()
 }
 
 watch(isOpen, () => {
@@ -31,7 +42,7 @@ watch(isOpen, () => {
 onMounted(() => {
   window.addEventListener('click', ev => {
     if (!dropDownSettingsButton.value.contains(ev.target)) {
-      isOpen.value = false
+      close()
     }
   })
 })
@@ -41,7 +52,7 @@ onMounted(() => {
   <div class="relative">
     <BaseTooltip text="Settings">
       <button
-        @click="isOpen = !isOpen"
+        @click="toggle"
         @keydown.esc="isOpen = false"
         ref="dropDownSettingsButton"
         class="relative p-2 focus:outline-none"
@@ -60,7 +71,7 @@ onMounted(() => {
     >
       <div
         v-show="isOpen"
-        @keydown.esc="isOpen = false"
+        @keydown.esc="close"
         :class="dropdownClasses"
         ref="dropDownSettings"
         tabindex="-1"
