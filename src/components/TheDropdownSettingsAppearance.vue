@@ -16,7 +16,7 @@ const themes = ref([
   <section class="flex items-center border-b border-gray-200 text-black">
     <button class="p-3 focus:outline-none">
       <BaseIcon
-        @click="$emit('select-menu', 'main')"
+        @click.stop="$emit('select-menu', 'main')"
         name="arrowLeft"
         class="h-5 w-5"
       />
