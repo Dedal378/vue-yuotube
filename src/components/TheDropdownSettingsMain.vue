@@ -31,7 +31,10 @@ const listItems = reactive([
   </section>
   <section class="py-2">
     <ul>
-      <DropdownSettingsListItem :label="listItems[8].label" :with-sub-menu="listItems[8].withSubMenu" />
+      <DropdownSettingsListItem
+        :label="listItems[8].label"
+        :with-sub-menu="listItems[8].withSubMenu"
+      />
     </ul>
   </section>
 </template>

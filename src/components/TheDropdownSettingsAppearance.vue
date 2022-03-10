@@ -4,19 +4,30 @@ import BaseIcon from './BaseIcon.vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
 const selectedThemeIdx = ref(0)
-const themes = ref(['Appearance', 'Use device theme', 'Dark theme', 'Light theme'])
+const themes = ref([
+  'Appearance',
+  'Use device theme',
+  'Dark theme',
+  'Light theme',
+])
 </script>
 
 <template>
   <section class="flex items-center border-b border-gray-200 text-black">
     <button class="p-3 focus:outline-none">
-      <BaseIcon name="arrowLeft" class="h-5 w-5" />
+      <BaseIcon
+        @click="$emit('select-menu', 'main')"
+        name="arrowLeft"
+        class="h-5 w-5"
+      />
     </button>
     <span>{{ themes[0] }}</span>
   </section>
 
   <section class="py-2">
-    <div class="p-3 text-xs text-gray-500">Setting applies to this browser only</div>
+    <div class="p-3 text-xs text-gray-500">
+      Setting applies to this browser only
+    </div>
     <ul>
       <DropdownSettingsListItem
         @click="selectedThemeIdx = themeIdx"

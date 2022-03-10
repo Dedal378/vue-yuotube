@@ -21,7 +21,7 @@ const dropdownClasses = reactive([
   'focus:outline-none',
 ])
 
-const showSelectedMenu = (selMenu) => {
+const showSelectedMenu = selMenu => {
   selectedMenu.value = selMenu
 }
 
@@ -29,7 +29,7 @@ watch(isOpen, () => {
   nextTick(() => isOpen.value && dropDownSettings.value.focus())
 })
 onMounted(() => {
-  window.addEventListener('click', (ev) => {
+  window.addEventListener('click', ev => {
     if (!dropDownSettingsButton.value.contains(ev.target)) {
       isOpen.value = false
     }
@@ -58,9 +58,21 @@ onMounted(() => {
       leave-from-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-55"
     >
-      <div v-show="isOpen" @keydown.esc="isOpen = false" :class="dropdownClasses" ref="dropDownSettings" tabindex="-1">
-        <TheDropdownSettingsMain v-if="selectedMenu === 'main'" @select-menu="showSelectedMenu" />
-        <TheDropdownSettingsAppearance v-else-if="selectedMenu === 'appearance'" @select-menu="showSelectedMenu" />
+      <div
+        v-show="isOpen"
+        @keydown.esc="isOpen = false"
+        :class="dropdownClasses"
+        ref="dropDownSettings"
+        tabindex="-1"
+      >
+        <TheDropdownSettingsMain
+          v-if="selectedMenu === 'main'"
+          @select-menu="showSelectedMenu"
+        />
+        <TheDropdownSettingsAppearance
+          v-else-if="selectedMenu === 'appearance'"
+          @select-menu="showSelectedMenu"
+        />
       </div>
     </transition>
   </div>
