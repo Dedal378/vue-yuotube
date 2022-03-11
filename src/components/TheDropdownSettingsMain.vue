@@ -4,15 +4,15 @@ import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
 defineEmits({ 'select-menu': null })
 const listItems = reactive([
-  { label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
-  { label: 'Language: English', icon: 'language', withSubMenu: true },
-  { label: 'Location: United States', icon: 'location', withSubMenu: true },
-  { label: 'Settings', icon: 'settings', withSubMenu: false },
-  { label: 'Your data in YouTube', icon: 'data', withSubMenu: false },
-  { label: 'Help', icon: 'help', withSubMenu: false },
-  { label: 'Send feedback', icon: 'feedback', withSubMenu: false },
-  { label: 'Keyboard shortcuts', icon: 'shortcut', withSubMenu: false },
-  { label: 'Restricted mode: Off', icon: null, withSubMenu: true },
+  { id: 'appearance', label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
+  { id: 'language', label: 'Language: English', icon: 'language', withSubMenu: true },
+  { id: 'location', label: 'Location: United States', icon: 'location', withSubMenu: true },
+  { id: 'settings', label: 'Settings', icon: 'settings', withSubMenu: false },
+  { id: 'data', label: 'Your data in YouTube', icon: 'data', withSubMenu: false },
+  { id: 'help', label: 'Help', icon: 'help', withSubMenu: false },
+  { id: 'feedback', label: 'Send feedback', icon: 'feedback', withSubMenu: false },
+  { id: 'shortcuts', label: 'Keyboard shortcuts', icon: 'shortcut', withSubMenu: false },
+  { id: 'mode', label: 'Restricted mode: Off', icon: null, withSubMenu: true },
 ])
 </script>
 
@@ -20,7 +20,7 @@ const listItems = reactive([
   <section class="py-2 border-b">
     <ul>
       <DropdownSettingsListItem
-        @click.stop="$emit('select-menu', 'appearance')"
+        @click.stop="$emit('select-menu', listItem.id)"
         v-for="listItem in listItems.slice(0, 8)"
         :key="listItem.label"
         :icon="listItem.icon"
@@ -32,7 +32,9 @@ const listItems = reactive([
   <section class="py-2">
     <ul>
       <DropdownSettingsListItem
+        @click.stop="$emit('select-menu', listItems[8].id)"
         :label="listItems[8].label"
+        :icon="listItems[8].icon"
         :with-sub-menu="listItems[8].withSubMenu"
       />
     </ul>

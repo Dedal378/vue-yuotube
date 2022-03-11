@@ -21,7 +21,9 @@ const props = defineProps({
     required: false,
   },
 })
-const isIconShown = computed(() => props.active || props.icon !== 'checkArr')
+const isIconShown = computed(
+  () => props.active || (props.icon !== 'checkArr' && props.icon !== null)
+)
 const iconName = computed(() => (props.active ? 'checkArr' : props.icon))
 </script>
 
@@ -33,7 +35,9 @@ const iconName = computed(() => (props.active ? 'checkArr' : props.icon))
         :name="iconName"
         class="h-5 w-5 mr-3 text-gray-400"
       />
-      <span :class="{ 'ml-8': !isIconShown }">{{ label }}</span>
+      <span :class="['truncate', 'flex-1', { 'ml-8': icon && !isIconShown }]">{{
+        label
+      }}</span>
       <BaseIcon
         v-if="withSubMenu"
         name="arrow"
