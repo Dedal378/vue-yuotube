@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
-defineEmits({ 'select-menu': null })
+const emit = defineEmits({ 'select-menu': null })
 const listItems = reactive([
   { id: 'appearance', label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
   { id: 'language', label: 'Language: English', icon: 'language', withSubMenu: true },
@@ -14,13 +14,20 @@ const listItems = reactive([
   { id: 'shortcuts', label: 'Keyboard shortcuts', icon: 'shortcut', withSubMenu: false },
   { id: 'mode', label: 'Restricted mode: Off', icon: null, withSubMenu: true },
 ])
+
+const selectMenu = (listItem) => {
+  // listItem.withSubMenu && emit('select-menu', listItem.id)
+  if (listItem.withSubMenu) {
+    emit('select-menu', listItem.id)
+  }
+}
 </script>
 
 <template>
   <section class="py-2 border-b">
     <ul>
       <DropdownSettingsListItem
-        @click.stop="$emit('select-menu', listItem.id)"
+        @click.stop="selectMenu(listItem)"
         v-for="listItem in listItems.slice(0, 8)"
         :key="listItem.label"
         :icon="listItem.icon"

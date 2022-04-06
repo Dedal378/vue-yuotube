@@ -1,5 +1,5 @@
 <script setup>
-import { nextTick, onMounted, reactive, ref, watch } from 'vue'
+import { nextTick, onMounted, reactive, ref, watch, computed } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import BaseTooltip from './BaseTooltip.vue'
 import TheDropdownSettingsMain from './TheDropdownSettingsMain.vue'
@@ -23,6 +23,24 @@ const dropdownClasses = reactive([
   'border-t-0',
   'focus:outline-none',
 ])
+const selectedOptions = reactive({
+  themeId: 0,
+  languageId: 0,
+  locationId: 0,
+  modeId: false,
+})
+
+const menu = computed(() => {
+  const menuComponentNames = {
+    menu: 'TheDropdownSettingsMain',
+    appearance: 'TheDropdownSettingsAppearance',
+    language: 'TheDropdownSettingsLanguage',
+    location: 'TheDropdownSettingsLocation',
+    mode: 'TheDropdownSettingsRestrictedMode',
+  }
+
+  return menuComponentNames[selectedMenu.value]
+})
 
 const showSelectedMenu = selMenu => {
   selectedMenu.value = selMenu
@@ -79,25 +97,33 @@ onMounted(() => {
         ref="dropDownSettings"
         tabindex="-1"
       >
+        <!--TODO: не работает, проверить-->
+        <!--<component :is="menu" @select-menu="showSelectedMenu" />-->
+
         <TheDropdownSettingsMain
           v-if="selectedMenu === 'main'"
           @select-menu="showSelectedMenu"
+          :selected-options="selectedOptions"
         />
         <TheDropdownSettingsAppearance
           v-else-if="selectedMenu === 'appearance'"
           @select-menu="showSelectedMenu"
+          :selected-options="selectedOptions"
         />
         <TheDropdownSettingsLanguage
           v-else-if="selectedMenu === 'language'"
           @select-menu="showSelectedMenu"
+          :selected-options="selectedOptions"
         />
         <TheDropdownSettingsLocation
           v-else-if="selectedMenu === 'location'"
           @select-menu="showSelectedMenu"
+          :selected-options="selectedOptions"
         />
         <TheDropdownSettingsRestrictedMode
           v-else-if="selectedMenu === 'mode'"
           @select-menu="showSelectedMenu"
+          :selected-options="selectedOptions"
         />
       </div>
     </transition>
