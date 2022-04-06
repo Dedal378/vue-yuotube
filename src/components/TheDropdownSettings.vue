@@ -1,5 +1,5 @@
 <script setup>
-import { nextTick, onMounted, reactive, ref, watch, computed } from 'vue'
+import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue'
 import BaseIcon from './BaseIcon.vue'
 import BaseTooltip from './BaseTooltip.vue'
 import TheDropdownSettingsMain from './TheDropdownSettingsMain.vue'
@@ -56,6 +56,9 @@ const open = () => {
 const toggle = () => {
   isOpen.value ? close() : open()
 }
+const selectOption = (option) => {
+  selectedOptions[option.name] = option.value
+}
 
 watch(isOpen, () => {
   nextTick(() => isOpen.value && dropDownSettings.value.focus())
@@ -98,8 +101,9 @@ onMounted(() => {
         tabindex="-1"
       >
         <component
-          :is="menu"
           @select-menu="showSelectedMenu"
+          @select-option="selectOption"
+          :is="menu"
           :selected-options="selectedOptions"
         />
       </div>

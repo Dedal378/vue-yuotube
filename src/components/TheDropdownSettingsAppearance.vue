@@ -3,15 +3,24 @@ import { ref } from 'vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 import DropdownSettingsHeader from './DropdownSettingsHeader.vue'
 
-defineEmits({ 'select-menu': null })
-const selectedThemeIdx = ref(0)
+defineProps({
+  selectedOptions: {
+    type: [Object, Number, String],
+    required: false,
+    default: 0,
+  },
+})
+const emits = defineEmits(['select-menu', 'select-option'])
 const themes = ref(['Use device theme', 'Dark theme', 'Light theme'])
+const selectOption = (themeId) => {
+  emits('select-option', { name: 'themeId', value: themeId })
+}
 </script>
 
 <template>
   <DropdownSettingsHeader
-    title="Appearance"
     @back="$emit('select-menu', 'main')"
+    title="Appearance"
   />
 
   <section class="py-2">
@@ -20,10 +29,10 @@ const themes = ref(['Use device theme', 'Dark theme', 'Light theme'])
     </div>
     <ul>
       <DropdownSettingsListItem
-        @click.stop="selectedThemeIdx = themeIdx"
+        @click.stop="selectOption(themeIdx)"
         v-for="(theme, themeIdx) in themes"
         :key="themeIdx"
-        :active="themeIdx === selectedThemeIdx"
+        :active="themeIdx === selectedOptions.themeId"
         :label="theme"
       />
     </ul>

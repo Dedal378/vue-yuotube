@@ -3,8 +3,14 @@ import { ref } from 'vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 import DropdownSettingsHeader from './DropdownSettingsHeader.vue'
 
-defineEmits({ 'select-menu': null })
-const selectedLanguageIdx = ref(0)
+defineProps({
+  selectedOptions: {
+    type: [Object, Number, String],
+    required: false,
+    default: 0,
+  },
+})
+const emits = defineEmits(['select-menu', 'select-option'])
 const languages = ref([
   'English',
   'Russian',
@@ -13,21 +19,24 @@ const languages = ref([
   'Russian',
   'Russian',
 ])
+const selectOption = (languageId) => {
+  emits('select-option', { name: 'languageId', value: languageId })
+}
 </script>
 
 <template>
   <DropdownSettingsHeader
-    title="Choose your language"
     @back="$emit('select-menu', 'main')"
+    title="Choose your language"
   />
 
   <section class="py-2">
     <ul class="max-h-96 overflow-auto">
       <DropdownSettingsListItem
-        @click.stop="selectedLanguageIdx = languageIdx"
+        @click.stop="selectOption(languageIdx)"
         v-for="(language, languageIdx) in languages"
         :key="languageIdx"
-        :active="languageIdx === selectedLanguageIdx"
+        :active="languageIdx === selectedOptions.languageId"
         :label="language"
       />
     </ul>

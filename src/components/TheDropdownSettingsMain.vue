@@ -2,7 +2,14 @@
 import { reactive } from 'vue'
 import DropdownSettingsListItem from './DropdownSettingsListItem.vue'
 
-const emit = defineEmits({ 'select-menu': null })
+defineProps({
+  selectedOptions: {
+    type: [Object, Number, String],
+    required: false,
+    default: 0,
+  },
+})
+defineEmits(['select-menu', 'select-option'])
 const listItems = reactive([
   { id: 'appearance', label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
   { id: 'language', label: 'Language: English', icon: 'language', withSubMenu: true },
