@@ -32,11 +32,11 @@ const selectedOptions = reactive({
 
 const menu = computed(() => {
   const menuComponentNames = {
-    menu: 'TheDropdownSettingsMain',
-    appearance: 'TheDropdownSettingsAppearance',
-    language: 'TheDropdownSettingsLanguage',
-    location: 'TheDropdownSettingsLocation',
-    mode: 'TheDropdownSettingsRestrictedMode',
+    main: TheDropdownSettingsMain,
+    appearance: TheDropdownSettingsAppearance,
+    language: TheDropdownSettingsLanguage,
+    location: TheDropdownSettingsLocation,
+    mode: TheDropdownSettingsRestrictedMode,
   }
 
   return menuComponentNames[selectedMenu.value]
@@ -97,31 +97,8 @@ onMounted(() => {
         ref="dropDownSettings"
         tabindex="-1"
       >
-        <!--TODO: не работает, проверить-->
-        <!--<component :is="menu" @select-menu="showSelectedMenu" />-->
-
-        <TheDropdownSettingsMain
-          v-if="selectedMenu === 'main'"
-          @select-menu="showSelectedMenu"
-          :selected-options="selectedOptions"
-        />
-        <TheDropdownSettingsAppearance
-          v-else-if="selectedMenu === 'appearance'"
-          @select-menu="showSelectedMenu"
-          :selected-options="selectedOptions"
-        />
-        <TheDropdownSettingsLanguage
-          v-else-if="selectedMenu === 'language'"
-          @select-menu="showSelectedMenu"
-          :selected-options="selectedOptions"
-        />
-        <TheDropdownSettingsLocation
-          v-else-if="selectedMenu === 'location'"
-          @select-menu="showSelectedMenu"
-          :selected-options="selectedOptions"
-        />
-        <TheDropdownSettingsRestrictedMode
-          v-else-if="selectedMenu === 'mode'"
+        <component
+          :is="menu"
           @select-menu="showSelectedMenu"
           :selected-options="selectedOptions"
         />
