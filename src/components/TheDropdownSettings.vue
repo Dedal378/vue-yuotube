@@ -24,7 +24,10 @@ const dropdownClasses = reactive([
   'focus:outline-none',
 ])
 const selectedOptions = reactive({
-  themeId: 0,
+  theme: {
+    id: 0,
+    text: 'Use device theme',
+  },
   languageId: 0,
   locationId: 0,
   modeId: false,

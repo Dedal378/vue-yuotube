@@ -9,7 +9,7 @@ defineProps({
     default: 0,
   },
 })
-defineEmits(['select-menu', 'select-option'])
+const emits = defineEmits(['select-menu', 'select-option'])
 const listItems = reactive([
   { id: 'appearance', label: 'Appearance: Device theme', icon: 'theme', withSubMenu: true },
   { id: 'language', label: 'Language: English', icon: 'language', withSubMenu: true },
@@ -25,7 +25,7 @@ const listItems = reactive([
 const selectMenu = (listItem) => {
   // listItem.withSubMenu && emit('select-menu', listItem.id)
   if (listItem.withSubMenu) {
-    emit('select-menu', listItem.id)
+    emits('select-menu', listItem.id)
   }
 }
 </script>
